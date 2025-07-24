@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+    --spark-of-light-dark-color: #00a7c4;
+    --spark-of-light-dark-top: #00517e;
+    --spark-of-light-dark-bottom: #00a7c4;
+    --pf-global--primary-color--100: #00ae31;
+    --pf-global--primary-color--200: #00952a;
+    --pf-global--primary-color--300: #007b23;
+    --weteam-sky-blue: #00c5e7;
+}
+
+body {
+    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    background: radial-gradient(
+        circle,
+        var(--spark-of-light-dark-bottom) 0,
+        var(--spark-of-light-dark-top) 100%
+    ) !important;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+a {
+    color: #00c5e7;
+}
+
+/*
+We.Team Header
+*/
+.kcLoginClass {
+    margin-top: 35px;
+}
+
+.kcLoginClass::before {
+    content: " ";
+    height: 80px;
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: block;
+    background-image: url(/src/login/logo.svg);
+    background-size: 196px 72px;
+    background-repeat: no-repeat;
+    background-position: 30px 3px;
+}
+
+/*
+Page header
+*/
+
+.kcHeaderClass {
+    text-align: center !important;
+}
+.kcHeaderWrapperClass span {
+    font-weight: 700;
+    color: white;
+}
+
+.kcHeaderWrapperClass {
+    font-size: 29px !important;
+    text-transform: none !important;
+    letter-spacing: 3px !important;
+    line-height: 1.2em !important;
+    padding: 62px 10px 20px !important;
+    white-space: normal !important;
+}
+
+@media (max-width: 767px) {
+    .kcHeaderWrapperClass {
+        font-size: 20px !important;
+    }
+}
+
+/*
+Alerts
+*/
+.kcAlertClass {
+    --pf-c-alert--BorderTopWidth: 0px !important;
+}
+
+/*
+Buttons
+*/
+.kcButtonClass {
+    border-radius: 50px;
+}
+.kcButtonPrimaryClass:active {
+    background-color: #007b23;
+}
+
+/*
+Language picker
+*/
+.kcLocaleMainClass {
+    display: none;
+}
+
+/*
+Inputs
+*/
+.kcTextareaClass,
+.kcInputClass {
+    font-size: 18px !important;
+    height: 69px !important;
+    border: 1px solid #c4c4c4 !important;
+    border-radius: 4px !important;
+    padding: 12px !important;
+}
+
+.kcInputGroup {
+    position: relative;
+}
+
+.kcFormPasswordVisibilityButtonClass {
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.kcFormPasswordVisibilityButtonClass::after {
+    border: none !important;
+}
+
+/*
+Form Card
+*/
+.kcFormCardClass {
+    position: relative;
+    border-top: none;
+    border-radius: 15px;
+    padding: 20px 40px 20px 40px !important;
+}
+
+.kcFormCardClass:after {
+    content: "";
+    position: absolute;
+    background: url(dots.svg) no-repeat;
+    right: -57px;
+    top: -57px;
+    height: 192px;
+    width: 170px;
+    z-index: -1;
+}
+
+@media (max-width: 767px) {
+    .kcFormCardClass {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        padding: 10px 20px 10px 20px !important;
+    }
+}
+
+/*
+Sign up
+*/
+.kcInfoAreaWrapperClass {
+    background-color: white !important;
+    font-size: initial !important;
+}
+.kcSignUpClass {
+    margin: initial !important;
+}
+
+/*
+Social logins
+*/
+.kcFormSocialAccountListButtonClass {
+    padding: 19px;
+}
+.kcFormSocialAccountListButtonClass::after {
+    border-radius: 50px !important;
+    border: solid 1px #c4c4c4 !important;
+}
+.kcFormSocialAccountListButtonClass::after {
+    border-radius: 50px !important;
+    border: solid 1px #c4c4c4 !important;
+}
+.kcFormSocialAccountListButtonClass:hover::after {
+    border-color: var(--weteam-sky-blue) !important;
+}
