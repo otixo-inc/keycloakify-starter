@@ -6,6 +6,7 @@ import type { ThemeName } from "../kc.gen";
 const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
   .withCustomTranslations({
     en: {
+      registerTitle: "Sign Up for Free",
       loginAccountTitle: "Welcome back! Sign In",
       loginTitleHtml: "",
       noAccount: "You do not have an account?",
@@ -13,10 +14,13 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       doForgotPassword: "Forgot your password?",
       usernameOrEmail: "Email Address",
       password: "Password",
-      "identity-provider-divider-label": "OR"
+      "identity-provider-divider-label": "OR",
+      providerSignIn: "Sign in with {0}",
+      providerSignUp: "Sign up with {0}"
     },
     // cspell: disable
     de: {
+      registerTitle: "Registriere dich kostenfrei",
       loginAccountTitle: "Willkommen zurück! Melde dich an",
       loginTitleHtml: "",
       noAccount: "Du hast noch kein Konto?",
@@ -24,7 +28,9 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       doForgotPassword: "Passwort vergessen?",
       usernameOrEmail: " E-Mail-Adresse",
       password: "Passwort",
-      "identity-provider-divider-label": "OR"
+      "identity-provider-divider-label": "OR",
+      providerSignIn: "Mit {0} anmelden",
+      providerSignUp: "Mit {0} registrieren"
     }
     // cspell: enable
   }).build();

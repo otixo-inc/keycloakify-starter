@@ -58,8 +58,10 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                     {p.iconClasses && <i className={clsx(kcClsx("kcCommonLogoIdP"), p.iconClasses)} aria-hidden="true"></i>}
                                     <span
                                         className={clsx(kcClsx("kcFormSocialAccountNameClass"), p.iconClasses && "kc-social-icon-text")}
-                                        dangerouslySetInnerHTML={{ __html: kcSanitize(p.displayName) }}
-                                    ></span>
+                                        // dangerouslySetInnerHTML={{ __html: kcSanitize(p.displayName) }}
+                                    >
+                                        {msg("providerSignIn", kcSanitize(p.displayName))}
+                                    </span>
                                 </a>
                             </li>
                         ))}

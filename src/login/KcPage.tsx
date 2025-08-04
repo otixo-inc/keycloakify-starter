@@ -72,6 +72,8 @@ function useCustomCss(kcContext: KcContext) {
     useMemo(() => {
         switch (kcContext.pageId) {
             case "login.ftl":
+            case "register.ftl":
+            case "login-reset-password.ftl":
                 import("./login.css");
                 break;
         }

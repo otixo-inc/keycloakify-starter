@@ -61,10 +61,9 @@ export default function Register(props: RegisterProps) {
                                     href={p.loginUrl}
                                 >
                                     {p.iconClasses && <i className={clsx(kcClsx("kcCommonLogoIdP"), p.iconClasses)} aria-hidden="true"></i>}
-                                    <span
-                                        className={clsx(kcClsx("kcFormSocialAccountNameClass"), p.iconClasses && "kc-social-icon-text")}
-                                        dangerouslySetInnerHTML={{ __html: kcSanitize(p.displayName) }}
-                                    ></span>
+                                    <span className={clsx(kcClsx("kcFormSocialAccountNameClass"), p.iconClasses && "kc-social-icon-text")}>
+                                        {msg("providerSignUp", kcSanitize(p.displayName))}
+                                    </span>
                                 </a>
                             </li>
                         ))}

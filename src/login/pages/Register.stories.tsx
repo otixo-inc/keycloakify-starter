@@ -28,14 +28,14 @@ export const WithTwoSocialProviders: Story = {
                             loginUrl: "google",
                             alias: "google",
                             providerId: "google",
-                            displayName: "Sign Up with Google",
+                            displayName: "Google",
                             iconClasses: "fa fa-google"
                         },
                         {
                             loginUrl: "microsoft",
                             alias: "microsoft",
                             providerId: "microsoft",
-                            displayName: "Sign Up with Microsoft",
+                            displayName: "Microsoft",
                             iconClasses: "fa fa-windows"
                         }
                     ]
