@@ -13,7 +13,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       doForgotPassword: "Forgot your password?",
       usernameOrEmail: "Email Address",
       password: "Password",
-      "identity-provider-login-label": "Or Sign Up With"
+      "identity-provider-divider-label": "Or"
     },
     // cspell: disable
     de: {
@@ -24,7 +24,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       doForgotPassword: "Passwort vergessen?",
       usernameOrEmail: " E-Mail-Adresse",
       password: "Passwort",
-      "identity-provider-login-label": "Or Sign Up With"
+      "identity-provider-divider-label": "Or"
     }
     // cspell: enable
   }).build();
