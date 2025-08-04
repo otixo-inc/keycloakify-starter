@@ -11,7 +11,20 @@ const kcContextExtension: KcContextExtension = {
         ...kcEnvDefaults
     }
 };
-const kcContextExtensionPerPage: KcContextExtensionPerPage = {};
+
+// https://docs.keycloakify.dev/faq/some-values-you-need-are-missing-from-in-kccontext
+export const { getKcContextMock: getKcContextMock_base } = createGetKcContextMock({
+    kcContextExtension,
+    kcContextExtensionPerPage: {},
+    overrides: {},
+    overridesPerPage: {}
+});
+
+const kcContextExtensionPerPage: KcContextExtensionPerPage = {
+    "register.ftl": {
+        social: getKcContextMock_base({ pageId: "login.ftl" }).social
+    }
+};
 
 export const { getKcContextMock } = createGetKcContextMock({
     kcContextExtension,

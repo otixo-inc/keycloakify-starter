@@ -17,6 +17,34 @@ export const Default: Story = {
     render: () => <KcPageStory />
 };
 
+export const WithTwoSocialProviders: Story = {
+    render: () => (
+        <KcPageStory
+            kcContext={{
+                social: {
+                    displayInfo: true,
+                    providers: [
+                        {
+                            loginUrl: "google",
+                            alias: "google",
+                            providerId: "google",
+                            displayName: "Google",
+                            iconClasses: "fa fa-google"
+                        },
+                        {
+                            loginUrl: "microsoft",
+                            alias: "microsoft",
+                            providerId: "microsoft",
+                            displayName: "Microsoft",
+                            iconClasses: "fa fa-windows"
+                        }
+                    ]
+                }
+            }}
+        />
+    )
+};
+
 export const WithEmailAlreadyExists: Story = {
     render: () => (
         <KcPageStory

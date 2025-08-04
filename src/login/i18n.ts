@@ -12,7 +12,8 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       doRegister: "Sign Up here",
       doForgotPassword: "Forgot your password?",
       usernameOrEmail: "Email Address",
-      password: "Password"
+      password: "Password",
+      "identity-provider-login-label": "Or Sign Up With"
     },
     // cspell: disable
     de: {
@@ -22,7 +23,8 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       doRegister: "Kostenlos registrieren",
       doForgotPassword: "Passwort vergessen?",
       usernameOrEmail: " E-Mail-Adresse",
-      password: "Passwort"
+      password: "Passwort",
+      "identity-provider-login-label": "Or Sign Up With"
     }
     // cspell: enable
   }).build();
