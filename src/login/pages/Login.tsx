@@ -64,7 +64,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                             </li>
                         ))}
                     </ul>
-                    <h2>{msg("identity-provider-divider-label")}</h2>
+                    <h2 className="kcOrDivider">{msg("identity-provider-divider-label")}</h2>
                 </div>
             )}
             <div id="kc-form">
