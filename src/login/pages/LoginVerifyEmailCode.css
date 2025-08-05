@@ -1,0 +1,8 @@
+.verifyButtons {
+    text-align: center;
+}
+
+.verifyButtons .kcButtonPrimaryClass {
+    width: 100%;
+    margin-bottom: 20px;
+}
