@@ -43,7 +43,13 @@ export default function LoginVerifyEmailCode(props: PageProps<Extract<KcContext,
                         </label>
                     </div>
                     <div className={kcClsx("kcInputWrapperClass")}>
-                        <input type="text" id="email_code" name="email_code" className={kcClsx("kcInputClass")} />
+                        <input
+                            type="text"
+                            id="email_code"
+                            name="email_code"
+                            className={kcClsx("kcInputClass")}
+                            aria-invalid={messagesPerField.exists("email_code")}
+                        />
                     </div>
                 </div>
 

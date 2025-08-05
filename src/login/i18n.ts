@@ -25,6 +25,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       doClickHere: "Resend code",
       doSubmit: "Verify",
       doCancel: "Cancel",
+      VerifyEmailInvalidCode: "Failed to verify the code. Please try again."
     },
     // cspell: disable
     de: {
@@ -47,6 +48,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       doClickHere: "Code erneut senden",
       doSubmit: "Überprüfen",
       doCancel: "Abbrechen",
+      VerifyEmailInvalidCode: "Der Code ist ungültig. Bitte versuche es erneut."
     }
     // cspell: enable
   }).build();
