@@ -14,7 +14,16 @@ export type KcContextExtension = {
 export type KcContextExtensionPerPage = {
   "register.ftl": {
     social: KcContext_base.Login["social"]
-  }
+  },
+  "login-verify-email-code.ftl": {
+    isAppInitiatedAction: boolean,
+    user: {
+      email: string;
+    };
+    url: {
+      loginAction: string;
+    };
+  };
 };
 
 export type KcContext = ExtendKcContext<KcContextExtension, KcContextExtensionPerPage>;

@@ -16,7 +16,15 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       password: "Password",
       "identity-provider-divider-label": "OR",
       providerSignIn: "Sign in with {0}",
-      providerSignUp: "Sign up with {0}"
+      providerSignUp: "Sign up with {0}",
+      email_code: "",
+      emailVerifyTitle: "Please verify your Email",
+      emailVerifyInstruction1: "You're almost done! Please enter the code we sent to <strong>{0}</strong>",
+      emailVerifyInstruction2: "Didn't receive the code?",
+      emailVerifyInstruction3: "Can't find your code? Check your spam folder",
+      doClickHere: "Resend code",
+      doSubmit: "Verify",
+      doCancel: "Cancel",
     },
     // cspell: disable
     de: {
@@ -30,7 +38,15 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       password: "Passwort",
       "identity-provider-divider-label": "OR",
       providerSignIn: "Mit {0} anmelden",
-      providerSignUp: "Mit {0} registrieren"
+      providerSignUp: "Mit {0} registrieren",
+      email_code: "",
+      emailVerifyTitle: "Bitte bestätige deine E-Mail-Adresse",
+      emailVerifyInstruction1: "Du bist fast fertig! Bitte gib den Code ein, den wir dir an <strong>{0}</strong> gesendet haben",
+      emailVerifyInstruction2: "Du hast den Code nicht erhalten?",
+      emailVerifyInstruction3: "Du kannst deinen Code nicht finden? Schaue in deinem Spam-Ordner nach!",
+      doClickHere: "Code erneut senden",
+      doSubmit: "Überprüfen",
+      doCancel: "Abbrechen",
     }
     // cspell: enable
   }).build();

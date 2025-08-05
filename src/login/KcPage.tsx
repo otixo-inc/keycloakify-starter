@@ -7,6 +7,7 @@ import Template from "keycloakify/login/Template";
 
 import "./main.css";
 
+const LoginVerifyEmailCode = lazy(() => import("./pages/LoginVerifyEmailCode"));
 const Register = lazy(() => import("./pages/Register"));
 const Login = lazy(() => import("./pages/Login"));
 
@@ -27,6 +28,14 @@ export default function KcPage(props: { kcContext: KcContext }) {
         <Suspense>
             {(() => {
                 switch (kcContext.pageId) {
+                    case "login-verify-email-code.ftl":
+                        return (
+                            <LoginVerifyEmailCode
+                                {...{ kcContext, i18n, classes }}
+                                Template={Template}
+                                doUseDefaultCss={true}
+                            />
+                        );
                     case "register.ftl":
                         return (
                             <Register
@@ -74,6 +83,7 @@ function useCustomCss(kcContext: KcContext) {
             case "login.ftl":
             case "register.ftl":
             case "login-reset-password.ftl":
+            case "login-verify-email-code.ftl":
                 import("./login.css");
                 break;
         }
