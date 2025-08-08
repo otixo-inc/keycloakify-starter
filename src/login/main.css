@@ -224,3 +224,12 @@ Social logins
 .kcContentWrapperClass > .col-md-10 {
     width: 100%;
 }
+
+.message {
+    margin: 1em 0;
+    background: #e8ebed;
+    padding: 1em 1.5em;
+    line-height: 1.4285em;
+    color: #1c1c1c;
+    border-radius: 5px;
+}

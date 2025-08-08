@@ -25,7 +25,9 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       doClickHere: "Resend code",
       doSubmit: "Verify",
       doCancel: "Cancel",
-      VerifyEmailInvalidCode: "Failed to verify the code. Please try again."
+      VerifyEmailInvalidCode: "Failed to verify the code. Please try again.",
+      registerInvitation: "After finalizing your registration, you’ll automatically join {0}’s TeamSpace \"{1}\".",
+      registerInvitationTitle: "Complete Your Registration"
     },
     // cspell: disable
     de: {
@@ -48,7 +50,9 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       doClickHere: "Code erneut senden",
       doSubmit: "Überprüfen",
       doCancel: "Abbrechen",
-      VerifyEmailInvalidCode: "Der Code ist ungültig. Bitte versuche es erneut."
+      VerifyEmailInvalidCode: "Der Code ist ungültig. Bitte versuche es erneut.",
+      registerInvitation: "Nachdem du die Registrierung abgeschlossen hast, trittst du {0}s TeamSpace \"{1}\" automatisch bei.",
+      registerInvitationTitle: "Registrierung abschließen"
     }
     // cspell: enable
   }).build();

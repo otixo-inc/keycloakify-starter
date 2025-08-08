@@ -14,6 +14,12 @@ type RegisterProps = PageProps<Extract<KcContext, { pageId: "register.ftl" }>, I
     doMakeUserConfirmPassword: boolean;
 };
 
+const searchParams = new URL(window.location.href).searchParams;
+const invitationToken = searchParams.get("invitationToken") ?? "";
+//const invitationWorkspaceId = searchParams.get("invitationWorkspaceId") ?? "";
+const invitationWorkspaceName = searchParams.get("invitationWorkspaceName") ?? "";
+const ownerName = searchParams.get("ownerName") ?? "";
+
 export default function Register(props: RegisterProps) {
     const { kcContext, i18n, doUseDefaultCss, Template, classes, UserProfileFormFields, doMakeUserConfirmPassword } = props;
 
@@ -45,10 +51,13 @@ export default function Register(props: RegisterProps) {
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
             classes={classes}
-            headerNode={messageHeader !== undefined ? advancedMsg(messageHeader) : msg("registerTitle")}
+            headerNode={
+                messageHeader !== undefined ? advancedMsg(messageHeader) : invitationToken ? msg("registerInvitationTitle") : msg("registerTitle")
+            }
             displayMessage={messagesPerField.exists("global")}
             displayRequiredFields
         >
+            {invitationToken && <div className="message">{msg("registerInvitation", ownerName, invitationWorkspaceName)}</div>}
             {social?.providers !== undefined && social.providers.length !== 0 && (
                 <div id="kc-social-providers" className={kcClsx("kcFormSocialAccountSectionClass")}>
                     <ul className={kcClsx("kcFormSocialAccountListClass", social.providers.length > 3 && "kcFormSocialAccountListGridClass")}>
