@@ -12,7 +12,7 @@ const Register = lazy(() => import("./pages/Register"));
 const Login = lazy(() => import("./pages/Login"));
 
 const UserProfileFormFields = lazy(
-    () => import("keycloakify/login/UserProfileFormFields")
+    () => import("./UserProfileFormFields")
 );
 
 const doMakeUserConfirmPassword = true;
