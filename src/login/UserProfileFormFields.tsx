@@ -37,6 +37,15 @@ export default function UserProfileFormFields(props: UserProfileFormFieldsProps<
     return (
         <>
             {formFieldStates.map(({ attribute, displayableErrors, valueOrValues }) => {
+
+              /**
+               * We.Team
+               * Ensure timezone is always set
+               */
+                if (attribute.name==="timezone") {
+                  valueOrValues = Intl.DateTimeFormat().resolvedOptions().timeZone
+                }
+
                 return (
                     <Fragment key={attribute.name}>
                         <GroupLabel attribute={attribute} groupNameRef={groupNameRef} i18n={i18n} kcClsx={kcClsx} />

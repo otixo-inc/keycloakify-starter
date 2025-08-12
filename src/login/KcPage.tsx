@@ -87,6 +87,11 @@ function useCustomCss(kcContext: KcContext) {
                 import("./login.css");
                 break;
         }
+        switch (kcContext.pageId) {
+            case "register.ftl":
+                import("./register.css");
+                break;
+        }
         switch (kcContext.themeName) {
             case "weteam-hide-idp":
                 import("./hide-identity-providers.css");

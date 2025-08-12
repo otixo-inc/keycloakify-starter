@@ -1,0 +1,6 @@
+/*
+  hide timezone field
+*/
+.kcFormGroupClass:has(input#timezone) {
+    display: none;
+}
