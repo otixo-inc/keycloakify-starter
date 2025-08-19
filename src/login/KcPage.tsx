@@ -1,4 +1,5 @@
 import { Suspense, lazy, useMemo } from "react";
+import Helmet from "react-helmet";
 import type { ClassKey } from "keycloakify/login";
 import type { KcContext } from "./KcContext";
 import { useI18n } from "./i18n";
@@ -11,9 +12,7 @@ const LoginVerifyEmailCode = lazy(() => import("./pages/LoginVerifyEmailCode"));
 const Register = lazy(() => import("./pages/Register"));
 const Login = lazy(() => import("./pages/Login"));
 
-const UserProfileFormFields = lazy(
-    () => import("./UserProfileFormFields")
-);
+const UserProfileFormFields = lazy(() => import("./UserProfileFormFields"));
 
 const doMakeUserConfirmPassword = true;
 
@@ -26,6 +25,19 @@ export default function KcPage(props: { kcContext: KcContext }) {
 
     return (
         <Suspense>
+            <Helmet>
+                <script
+                    type="text/javascript"
+                    src="https://cdn.cookielaw.org/consent/66f89c34-c2ce-406e-a6aa-fafabbf962c6/OtAutoBlock.js"
+                ></script>
+                <script
+                    src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
+                    type="text/javascript"
+                    charSet="UTF-8"
+                    data-domain-script="66f89c34-c2ce-406e-a6aa-fafabbf962c6"
+                ></script>
+                <script type="text/javascript">function OptanonWrapper() {}</script>
+            </Helmet>
             {(() => {
                 switch (kcContext.pageId) {
                     case "login-verify-email-code.ftl":
