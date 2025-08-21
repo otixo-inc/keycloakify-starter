@@ -27,7 +27,11 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       doCancel: "Cancel",
       VerifyEmailInvalidCode: "Failed to verify the code. Please try again.",
       registerInvitation: "After finalizing your registration, you’ll automatically join {0}’s TeamSpace \"{1}\".",
-      registerInvitationTitle: "Complete Your Registration"
+      registerInvitationTitle: "Join \"{0}\"",
+      completeYourRegistration: "Complete Your Registration",
+      haveaWeteamAccount: "I have a We.Team Account",
+      "newsletter.yes": "It's OK to send me emails about We.Team",
+      termsAcceptanceRequired: "termsAcceptanceRequired"
     },
     // cspell: disable
     de: {
@@ -52,7 +56,11 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       doCancel: "Abbrechen",
       VerifyEmailInvalidCode: "Der Code ist ungültig. Bitte versuche es erneut.",
       registerInvitation: "Nachdem du die Registrierung abgeschlossen hast, trittst du {0}s TeamSpace \"{1}\" automatisch bei.",
-      registerInvitationTitle: "Registrierung abschließen"
+      registerInvitationTitle: "\"{0}\" beitreten",
+      completeYourRegistration: "Registrierung abschließen",
+      haveaWeteamAccount: "Ich habe ein We.Team Benutzerkonto",
+      "newsletter.yes": "Ich möchte Tipps, News und Angebote zu We.Team per E-Mail erhalten.",
+      termsAcceptanceRequired: "termsAcceptanceRequired"
     }
     // cspell: enable
   }).build();

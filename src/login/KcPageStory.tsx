@@ -22,7 +22,10 @@ export const { getKcContextMock: getKcContextMock_base } = createGetKcContextMoc
 
 const kcContextExtensionPerPage: KcContextExtensionPerPage = {
     "register.ftl": {
-        social: getKcContextMock_base({ pageId: "login.ftl" }).social
+        social: getKcContextMock_base({ pageId: "login.ftl" }).social,
+        invitationToken: undefined,
+        invitationWorkspaceName: undefined,
+        ownerName: undefined
     },
     "login-verify-email-code.ftl": {
         isAppInitiatedAction: false,

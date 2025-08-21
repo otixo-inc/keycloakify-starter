@@ -136,7 +136,7 @@ Form Card
     position: relative;
     border-top: none;
     border-radius: 15px;
-    padding: 20px 40px 20px 40px !important;
+    padding: 20px !important;
 }
 
 .kcFormCardClass:after {
@@ -154,7 +154,6 @@ Form Card
     .kcFormCardClass {
         margin-left: 10px !important;
         margin-right: 10px !important;
-        padding: 10px 20px 10px 20px !important;
     }
 }
 

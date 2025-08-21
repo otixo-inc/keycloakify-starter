@@ -17,6 +17,30 @@ export const Default: Story = {
     render: () => <KcPageStory />
 };
 
+export const WithInvitationToken: Story = {
+    render: () => (
+        <KcPageStory
+            kcContext={{
+                invitationToken: 'hello',
+                invitationWorkspaceName: 'hello',
+                ownerName: 'hello',
+                social: {
+                    displayInfo: true,
+                    providers: [
+                        {
+                            loginUrl: "google",
+                            alias: "google",
+                            providerId: "google",
+                            displayName: "Google",
+                            iconClasses: "fa fa-google"
+                        },
+                    ]
+                }
+            }}
+        />
+    )
+};
+
 export const WithTwoSocialProviders: Story = {
     render: () => (
         <KcPageStory

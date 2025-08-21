@@ -4,3 +4,89 @@
 .kcFormGroupClass:has(input#timezone) {
     display: none;
 }
+
+.subtitle {
+    display: none;
+}
+
+.ui.menu {
+    display: flex;
+    font-family:
+        Lato,
+        Helvetica Neue,
+        Arial,
+        Helvetica,
+        sans-serif;
+    font-weight: 400;
+    min-height: 2.85714286em;
+    font-size: 1rem;
+    box-shadow: none !important;
+    border: none;
+    background: none transparent;
+    border-bottom: 1px solid #d4d4d5;
+    top: 0;
+    bottom: 0;
+    border-radius: 0;
+    margin: 0 -1px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+.ui.menu .item a {
+    color: #1c1c1c;
+    text-decoration: none !important;
+}
+
+.ui.menu .item {
+    position: relative;
+    vertical-align: middle;
+    line-height: 1;
+    text-decoration: none;
+    flex: 0 0 auto;
+    user-select: none;
+    text-transform: none;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-bottom: none;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 2px solid transparent;
+    padding: 0.92857143em 1.42857143em;
+    color: #1c1c1c;
+}
+
+.ui.menu .active.item {
+    background: none #fff;
+    color: rgba(0, 0, 0, 0.95);
+    border-top-width: 1px;
+    border-color: #d4d4d5;
+    font-weight: 700;
+    margin-bottom: -1px;
+    box-shadow: none;
+    border-radius: 0.28571429rem 0.28571429rem 0px 0px !important;
+}
+
+.ui.tab {
+    position: relative;
+    background: #fff;
+    padding: 1em;
+    box-shadow:
+        0 1px 2px #c4c4c4,
+        none;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    margin: 0 -1px;
+    box-shadow: none;
+    border: 1px solid #d4d4d5;
+    border-top: none;
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    width: 100%;
+}

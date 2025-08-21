@@ -1,5 +1,5 @@
 import { Suspense, lazy, useMemo } from "react";
-import Helmet from "react-helmet";
+// import Helmet from "react-helmet";
 import type { ClassKey } from "keycloakify/login";
 import type { KcContext } from "./KcContext";
 import { useI18n } from "./i18n";
@@ -25,7 +25,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
 
     return (
         <Suspense>
-            <Helmet>
+            {/* <Helmet>
                 <script
                     type="text/javascript"
                     src="https://cdn.cookielaw.org/consent/66f89c34-c2ce-406e-a6aa-fafabbf962c6/OtAutoBlock.js"
@@ -37,7 +37,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                     data-domain-script="66f89c34-c2ce-406e-a6aa-fafabbf962c6"
                 ></script>
                 <script type="text/javascript">function OptanonWrapper() {}</script>
-            </Helmet>
+            </Helmet> */}
             {(() => {
                 switch (kcContext.pageId) {
                     case "login-verify-email-code.ftl":

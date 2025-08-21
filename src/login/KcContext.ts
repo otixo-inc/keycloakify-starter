@@ -13,7 +13,10 @@ export type KcContextExtension = {
 // https://docs.keycloakify.dev/faq/some-values-you-need-are-missing-from-in-kccontext
 export type KcContextExtensionPerPage = {
   "register.ftl": {
-    social: KcContext_base.Login["social"]
+    social: KcContext_base.Login["social"];
+    invitationToken: string | undefined;
+    invitationWorkspaceName: string | undefined;
+    ownerName: string | undefined;
   },
   "login-verify-email-code.ftl": {
     isAppInitiatedAction: boolean,
