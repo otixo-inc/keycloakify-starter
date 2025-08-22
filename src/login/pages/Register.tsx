@@ -142,15 +142,6 @@ export default function Register(props: RegisterProps) {
                         </div>
                     )}
                     <div className={kcClsx("kcFormGroupClass")}>
-                        {!invitationTokenFinal && (
-                            <div id="kc-form-options" className={kcClsx("kcFormOptionsClass")}>
-                                <div className={kcClsx("kcFormOptionsWrapperClass")}>
-                                    <span>
-                                        <a href={url.loginUrl}>{msg("backToLogin")}</a>
-                                    </span>
-                                </div>
-                            </div>
-                        )}
                         {recaptchaRequired && !recaptchaVisible && recaptchaAction !== undefined ? (
                             <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
                                 <button
@@ -176,6 +167,15 @@ export default function Register(props: RegisterProps) {
                                     type="submit"
                                     value={msgStr("doRegister")}
                                 />
+                            </div>
+                        )}
+                        {!invitationTokenFinal && (
+                            <div id="kc-form-options" className={`${kcClsx("kcFormOptionsClass")} backToLogin`}>
+                                <div className={kcClsx("kcFormOptionsWrapperClass")}>
+                                    <span>
+                                        {msg("alreadyHaveAnAccount")}&nbsp;<a href={url.loginUrl}>{msg("backToLogin")}</a>
+                                    </span>
+                                </div>
                             </div>
                         )}
                     </div>
