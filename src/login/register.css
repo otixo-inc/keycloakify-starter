@@ -5,7 +5,11 @@
     display: none;
 }
 
-.subtitle {
+/*
+  hide newsletter and terms of service labels
+*/
+.kcLabelWrapperClass:has(label[for=tos]),
+.kcLabelWrapperClass:has(label[for=newsletter]) {
     display: none;
 }
 
@@ -89,4 +93,12 @@
     margin-top: 0;
     margin-right: 0;
     width: 100%;
+}
+
+.backToLogin {
+  margin-top: 20px;
+  text-align: center;
+}
+.backToLogin span {
+  display: inline !important;
 }

@@ -13,29 +13,70 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+const weTeamContext = {
+    social: {
+        displayInfo: true,
+        providers: [
+            {
+                loginUrl: "google",
+                alias: "google",
+                providerId: "google",
+                displayName: "Google",
+                iconClasses: "fa fa-google"
+            }
+        ]
+    },
+    profile: {
+        attributesByName: {
+            newsletter: {
+                name: "newsletter",
+                displayName: "Sign up to the newsletter",
+                validators: {
+                    options: {
+                        options: ["yes"]
+                    }
+                },
+                annotations: {
+                    inputOptionLabelsI18nPrefix: "newsletter",
+                    inputType: "multiselect-checkboxes"
+                },
+                required: false,
+                readOnly: false
+            } satisfies Attribute,
+            tos: {
+                name: "tos",
+                displayName: "Terms of Service",
+                validators: {
+                    options: {
+                        options: ["yes"]
+                    }
+                },
+                annotations: {
+                    inputOptionLabelsI18nPrefix: "tos",
+                    inputType: "multiselect-checkboxes"
+                },
+                required: false,
+                readOnly: false
+            } satisfies Attribute
+        }
+    }
+};
+
 export const Default: Story = {
     render: () => <KcPageStory />
 };
 
-export const WithInvitationToken: Story = {
+export const WeTeam: Story = {
+    render: () => <KcPageStory kcContext={weTeamContext} />
+};
+export const WeTeamWithInvitationToken: Story = {
     render: () => (
         <KcPageStory
             kcContext={{
-                invitationToken: 'hello',
-                invitationWorkspaceName: 'hello',
-                ownerName: 'hello',
-                social: {
-                    displayInfo: true,
-                    providers: [
-                        {
-                            loginUrl: "google",
-                            alias: "google",
-                            providerId: "google",
-                            displayName: "Google",
-                            iconClasses: "fa fa-google"
-                        },
-                    ]
-                }
+                ...weTeamContext,
+                invitationToken: "hello",
+                invitationWorkspaceName: "hello",
+                ownerName: "hello"
             }}
         />
     )
