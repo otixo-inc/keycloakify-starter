@@ -100,6 +100,11 @@ function useCustomCss(kcContext: KcContext) {
                 break;
         }
         switch (kcContext.pageId) {
+            case "terms.ftl":
+                import("./terms.css");
+                break;
+        }
+        switch (kcContext.pageId) {
             case "register.ftl":
                 import("./register.css");
                 break;
