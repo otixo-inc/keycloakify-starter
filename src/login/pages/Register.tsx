@@ -173,7 +173,7 @@ export default function Register(props: RegisterProps) {
                             <div id="kc-form-options" className={`${kcClsx("kcFormOptionsClass")} backToLogin`}>
                                 <div className={kcClsx("kcFormOptionsWrapperClass")}>
                                     <span>
-                                        {msg("alreadyHaveAnAccount")}&nbsp;<a href={url.loginUrl}>{msg("backToLogin")}</a>
+                                        {msg("alreadyHaveAnAccount")}&nbsp;<a href={url.loginUrl}>{msg("register.backToLogin")}</a>
                                     </span>
                                 </div>
                             </div>
