@@ -14,6 +14,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const weTeamContext = {
+    termsAcceptanceRequired: true,
+    // "x-keycloakify": {
+    //     messages: {
+    //         termsText: "termsTextBy signing up you agree to We.Team’s <a href='https://we.team/en/terms-of-service-basic' target='_blank' rel='noopener noreferrer'>Terms of Service</a> and <a href='https://we.team/en/privacy-policy-basic' target='_blank' rel='noopener noreferrer'>Privacy Policy</a>",
+    //         termsAccepted: "termsAcceptedBy signing up you agree to We.Team’s <a href='https://we.team/en/terms-of-service-basic' target='_blank' rel='noopener noreferrer'>Terms of Service</a> and <a href='https://we.team/en/privacy-policy-basic' target='_blank' rel='noopener noreferrer'>Privacy Policy</a>"
+    //     }
+    // },
     social: {
         displayInfo: true,
         providers: [
@@ -43,21 +50,6 @@ const weTeamContext = {
                 required: false,
                 readOnly: false
             } satisfies Attribute,
-            tos: {
-                name: "tos",
-                displayName: "Terms of Service",
-                validators: {
-                    options: {
-                        options: ["yes"]
-                    }
-                },
-                annotations: {
-                    inputOptionLabelsI18nPrefix: "tos",
-                    inputType: "multiselect-checkboxes"
-                },
-                required: false,
-                readOnly: false
-            } satisfies Attribute
         }
     }
 };

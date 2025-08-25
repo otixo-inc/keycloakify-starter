@@ -198,14 +198,14 @@ function TermsAcceptance(props: {
 
     return (
         <>
-            <div className="form-group">
+            {/* <div className="form-group">
                 <div className={kcClsx("kcInputWrapperClass")}>
                     {msg("termsTitle")}
                     <div id="kc-registration-terms-text">{msg("termsText")}</div>
                 </div>
-            </div>
+            </div> */}
             <div className="form-group">
-                <div className={kcClsx("kcLabelWrapperClass")}>
+                <div className={`${kcClsx("kcLabelWrapperClass")} pf-c-check`}>
                     <input
                         type="checkbox"
                         id="termsAccepted"
