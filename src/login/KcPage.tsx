@@ -96,12 +96,25 @@ function useCustomCss(kcContext: KcContext) {
             case "register.ftl":
             case "login-reset-password.ftl":
             case "login-verify-email-code.ftl":
+            case "login-update-password.ftl":
+            case "login-password.ftl":
+            case "login-idp-link-confirm.ftl":
                 import("./login.css");
                 break;
         }
         switch (kcContext.pageId) {
             case "terms.ftl":
                 import("./terms.css");
+                break;
+        }
+        switch (kcContext.pageId) {
+            case "login-idp-link-confirm.ftl":
+                import("./login-idp-link-confirm.css");
+                break;
+        }
+        switch (kcContext.pageId) {
+            case "login-idp-link-email.ftl":
+                import("./login-idp-link-email.css");
                 break;
         }
         switch (kcContext.pageId) {
