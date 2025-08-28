@@ -7,6 +7,8 @@ import type { PageProps } from "keycloakify/login/pages/PageProps";
 import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
+import { getHideIdp } from "./getHideIdp";
+
 
 export default function Login(props: PageProps<Extract<KcContext, { pageId: "login.ftl" }>, I18n>) {
     const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
@@ -21,6 +23,8 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
     const { msg, msgStr } = i18n;
 
     const [isLoginButtonDisabled, setIsLoginButtonDisabled] = useState(false);
+
+    const hideIdp = getHideIdp();
 
     return (
         <Template
@@ -44,7 +48,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                 </div>
             }
         >
-            {realm.password && social?.providers !== undefined && social.providers.length !== 0 && (
+            {!hideIdp && realm.password && social?.providers !== undefined && social.providers.length !== 0 && (
                 <div id="kc-social-providers" className={kcClsx("kcFormSocialAccountSectionClass")}>
                     <ul className={kcClsx("kcFormSocialAccountListClass", social.providers.length > 3 && "kcFormSocialAccountListGridClass")}>
                         {social.providers.map((...[p, , providers]) => (

@@ -8,6 +8,7 @@ import type { UserProfileFormFieldsProps } from "keycloakify/login/UserProfileFo
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
+import { getHideIdp } from "./getHideIdp";
 
 type RegisterProps = PageProps<Extract<KcContext, { pageId: "register.ftl" }>, I18n> & {
     UserProfileFormFields: LazyOrNot<(props: UserProfileFormFieldsProps) => JSX.Element>;
@@ -64,6 +65,8 @@ export default function Register(props: RegisterProps) {
     //     loginUrl.searchParams.append("ownerName", ownerNameFinal);
     // }
 
+    const hideIdp = getHideIdp();
+
     return (
         <Template
             kcContext={kcContext}
@@ -92,7 +95,7 @@ export default function Register(props: RegisterProps) {
             )}
             <div className={invitationTokenFinal ? "ui tab" : ""}>
                 {invitationTokenFinal && <div className="message">{msg("registerInvitation", ownerNameFinal, invitationWorkspaceNameFinal)}</div>}
-                {social?.providers !== undefined && social.providers.length !== 0 && (
+                {!hideIdp && social?.providers !== undefined && social.providers.length !== 0 && (
                     <div id="kc-social-providers" className={kcClsx("kcFormSocialAccountSectionClass")}>
                         <ul className={kcClsx("kcFormSocialAccountListClass", social.providers.length > 3 && "kcFormSocialAccountListGridClass")}>
                             {social.providers.map((...[p, , providers]) => (
