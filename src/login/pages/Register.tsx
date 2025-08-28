@@ -128,6 +128,7 @@ export default function Register(props: RegisterProps) {
                         onIsFormSubmittableValueChange={setIsFormSubmittable}
                         doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                     />
+                    {msg("registrationTermsText")}
                     {termsAcceptanceRequired && (
                         <TermsAcceptance
                             i18n={i18n}

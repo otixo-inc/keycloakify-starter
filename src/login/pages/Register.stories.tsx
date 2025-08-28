@@ -14,7 +14,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const weTeamContext = {
-    termsAcceptanceRequired: true,
+    //termsAcceptanceRequired: true,
     // "x-keycloakify": {
     //     messages: {
     //         termsText: "termsTextBy signing up you agree to We.Team’s <a href='https://we.team/en/terms-of-service-basic' target='_blank' rel='noopener noreferrer'>Terms of Service</a> and <a href='https://we.team/en/privacy-policy-basic' target='_blank' rel='noopener noreferrer'>Privacy Policy</a>",

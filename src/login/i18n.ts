@@ -32,6 +32,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "newsletter.yes": "It's OK to send me emails about We.Team",
       "acceptTerms": "By signing up you agree to We.Team’s <a href='https://we.team/en/terms-of-service-basic' target='_blank' rel='noopener noreferrer'>Terms of Service</a> and <a href='https://we.team/en/privacy-policy-basic' target='_blank' rel='noopener noreferrer'>Privacy Policy</a>",
       "termsText": "By signing up you agree to We.Team’s <a href='https://we.team/en/terms-of-service-basic' target='_blank' rel='noopener noreferrer'>Terms of Service</a> and <a href='https://we.team/en/privacy-policy-basic' target='_blank' rel='noopener noreferrer'>Privacy Policy</a>",
+      registrationTermsText: "By continuing you agree to We.Team’s <a href='https://we.team/en/terms-of-service-basic' target='_blank' rel='noopener noreferrer'>Terms of Service</a> and <a href='https://we.team/en/privacy-policy-basic' target='_blank' rel='noopener noreferrer'>Privacy Policy</a>",
       "alreadyHaveAnAccount": "Already have an account?",
       "register.backToLogin": "Sign In",
       "error-invalid-credentials": "Invalid email address or invalid password"
@@ -64,6 +65,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "newsletter.yes": "Ich möchte Tipps, News und Angebote zu We.Team per E-Mail erhalten.",
       "acceptTerms": "Mit deiner Registrierung stimmst du den <a href='https://we.team/nutzungsbedingungen-basic' target='_blank' rel='noopener noreferrer'>Nutzungsbedingungen</a> und <a href='https://we.team/datenschutzrichtlinie-basic' target='_blank' rel='noopener noreferrer'>Datenschutzrichtlinie</a> von We.Team zu",
       "termsText": "Mit deiner Registrierung stimmst du den <a href='https://we.team/nutzungsbedingungen-basic' target='_blank' rel='noopener noreferrer'>Nutzungsbedingungen</a> und <a href='https://we.team/datenschutzrichtlinie-basic' target='_blank' rel='noopener noreferrer'>Datenschutzrichtlinie</a> von We.Team zu",
+      registrationTermsText: "By continuing you agree to We.Team’s <a href='https://we.team/nutzungsbedingungen-basic' target='_blank' rel='noopener noreferrer'>Nutzungsbedingungen</a> and <a href='https://we.team/datenschutzrichtlinie-basic' target='_blank' rel='noopener noreferrer'>Datenschutzrichtlinie</a>",
       "alreadyHaveAnAccount": "Du hast bereits ein Konto?",
       "register.backToLogin": "Anmelden",
       "error-invalid-credentials": "Ungültige E-Mail-Adresse oder ungültiges Passwort"
