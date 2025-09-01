@@ -232,3 +232,19 @@ Social logins
     color: #1c1c1c;
     border-radius: 5px;
 }
+
+
+/*
+Buttons
+*/
+.kcButtonLargeClass {
+    font-weight: bold;
+    font-size: 22px !important;
+    height: 60px;
+    min-width: 80px;
+    padding: 0px 20px;
+}
+
+.kcFormButtonsWrapperClass > .kcButtonClass {
+  margin-right: 10px !important;
+}

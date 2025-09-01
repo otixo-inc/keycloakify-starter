@@ -99,12 +99,17 @@ function useCustomCss(kcContext: KcContext) {
             case "login-update-password.ftl":
             case "login-password.ftl":
             case "login-idp-link-confirm.ftl":
-                import("./login.css");
+                import("./button.css");
                 break;
         }
         switch (kcContext.pageId) {
             case "terms.ftl":
                 import("./terms.css");
+                break;
+        }
+        switch (kcContext.pageId) {
+            case "login-reset-otp.ftl":
+                import("./login-reset-otp.css");
                 break;
         }
         switch (kcContext.pageId) {
