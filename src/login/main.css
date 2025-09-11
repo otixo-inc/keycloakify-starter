@@ -261,5 +261,7 @@ Buttons
     margin-right: 10px !important;
 }
 
-.kcAlertClass {
+
+#kc-delete-text {
+  margin-bottom: 20px;
 }
