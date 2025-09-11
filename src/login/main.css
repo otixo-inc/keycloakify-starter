@@ -81,6 +81,19 @@ Alerts
 */
 .kcAlertClass {
     --pf-c-alert--BorderTopWidth: 0px !important;
+    /* --pf-c-alert--m-inline--BackgroundColor: #fff7f8 !important;
+    --pf-c-alert__title--Color: #ff000f !important;
+    --pf-c-alert__icon--Color: #ff000f !important; */
+    border-radius: 4px !important;
+}
+
+.kcAlertTitleClass {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+
+.kcFeedbackErrorIcon {
+  display: none;
 }
 
 /*
@@ -233,7 +246,6 @@ Social logins
     border-radius: 5px;
 }
 
-
 /*
 Buttons
 */
@@ -246,5 +258,8 @@ Buttons
 }
 
 .kcFormButtonsWrapperClass > .kcButtonClass {
-  margin-right: 10px !important;
+    margin-right: 10px !important;
+}
+
+.kcAlertClass {
 }
