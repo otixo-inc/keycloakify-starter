@@ -100,8 +100,8 @@ Alerts
 /*
 Buttons
 */
-.kcButtonClass:not(:first-child) {
-    margin-left: 10px !important;
+.kcButtonClass:first-child {
+    margin-right: 10px !important;
 }
 
 .kcButtonClass {
@@ -269,6 +269,7 @@ Buttons
 
 .alert {
     border-radius: 4px;
+    border:none !important;
 }
 
 .kcRecoveryCodesWarning {
