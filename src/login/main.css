@@ -81,14 +81,33 @@ Alerts
 */
 .kcAlertClass {
     --pf-c-alert--BorderTopWidth: 0px !important;
+    /* --pf-c-alert--m-inline--BackgroundColor: #fff7f8 !important;
+    --pf-c-alert__title--Color: #ff000f !important;
+    --pf-c-alert__icon--Color: #ff000f !important; */
+    border-radius: 4px !important;
+    margin-bottom: 10px !important;
+}
+
+.kcAlertTitleClass {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+
+.kcFeedbackErrorIcon {
+    display: none;
 }
 
 /*
 Buttons
 */
+.kcButtonClass:not(:first-child) {
+    margin-left: 10px !important;
+}
+
 .kcButtonClass {
     border-radius: 50px;
 }
+
 .kcButtonPrimaryClass:active {
     background-color: #007b23;
 }
@@ -233,7 +252,6 @@ Social logins
     border-radius: 5px;
 }
 
-
 /*
 Buttons
 */
@@ -245,6 +263,40 @@ Buttons
     padding: 0px 20px;
 }
 
-.kcFormButtonsWrapperClass > .kcButtonClass {
-  margin-right: 10px !important;
+#kc-delete-text {
+    margin-bottom: 20px;
+}
+
+.alert {
+    border-radius: 4px;
+}
+
+.kcRecoveryCodesWarning {
+    border-radius: 4px;
+    border-top: none;
+    margin-top: 5px;
+}
+
+.kcSelectAuthListItemArrowIconClass {
+    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.kcSelectAuthListItemArrowIconClass::before {
+    content: "";
+}
+.kcSelectAuthListItemIconClass {
+    display: none;
+}
+.kcSelectAuthListItemDescriptionClass span:first-child {
+    margin-right: 2px;
+}
+.kcSelectAuthListItemHeadingClass,
+.kcSelectAuthListItemDescriptionClass {
+    margin-bottom: 5px !important;
+}
+.kcSelectAuthListItemClass {
+    padding-left: 10px !important;
+}
+#kc-select-try-another-way-form {
+    margin-top: 20px !important;
 }

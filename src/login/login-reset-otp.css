@@ -1,0 +1,8 @@
+.kcInfoAreaWrapperClass input[type="radio"] {
+    display: none !important;
+}
+
+.kcInfoAreaWrapperClass label {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
