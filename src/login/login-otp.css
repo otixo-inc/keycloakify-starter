@@ -1,0 +1,15 @@
+#kc-otp-login-form .kcFormGroupClass:first-child input[type="radio"] {
+    display: none !important;
+}
+
+#kc-otp-login-form .kcFormGroupClass:first-child label {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+#kc-otp-login-form .kcInputWrapperClass {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}

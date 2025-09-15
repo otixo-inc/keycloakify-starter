@@ -127,6 +127,16 @@ function useCustomCss(kcContext: KcContext) {
                 import("./register.css");
                 break;
         }
+        switch (kcContext.pageId) {
+            case "login-otp.ftl":
+                import("./login-otp.css");
+                break;
+        }
+        switch (kcContext.pageId) {
+            case "login-reset-otp.ftl":
+                import("./login-reset-otp.css");
+                break;
+        }
         switch (kcContext.themeName) {
             case "weteam-hide-idp":
                 import("./hide-identity-providers.css");
