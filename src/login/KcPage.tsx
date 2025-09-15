@@ -133,6 +133,11 @@ function useCustomCss(kcContext: KcContext) {
                 break;
         }
         switch (kcContext.pageId) {
+            case "webauthn-authenticate.ftl":
+                import("./webauthn-authenticate.css");
+                break;
+        }
+        switch (kcContext.pageId) {
             case "login-reset-otp.ftl":
                 import("./login-reset-otp.css");
                 break;
