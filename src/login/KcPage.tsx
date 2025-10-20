@@ -98,7 +98,6 @@ function useCustomCss(kcContext: KcContext) {
             case "login-verify-email-code.ftl":
             case "login-update-password.ftl":
             case "login-password.ftl":
-            case "login-idp-link-confirm.ftl":
                 import("./button.css");
                 break;
         }
@@ -106,40 +105,26 @@ function useCustomCss(kcContext: KcContext) {
             case "terms.ftl":
                 import("./terms.css");
                 break;
-        }
-        switch (kcContext.pageId) {
             case "login-reset-otp.ftl":
                 import("./login-reset-otp.css");
                 break;
-        }
-        switch (kcContext.pageId) {
             case "login-idp-link-confirm.ftl":
                 import("./login-idp-link-confirm.css");
                 break;
-        }
-        switch (kcContext.pageId) {
             case "login-idp-link-email.ftl":
                 import("./login-idp-link-email.css");
                 break;
-        }
-        switch (kcContext.pageId) {
             case "register.ftl":
                 import("./register.css");
                 break;
-        }
-        switch (kcContext.pageId) {
             case "login-otp.ftl":
                 import("./login-otp.css");
                 break;
-        }
-        switch (kcContext.pageId) {
             case "webauthn-authenticate.ftl":
                 import("./webauthn-authenticate.css");
                 break;
-        }
-        switch (kcContext.pageId) {
-            case "login-reset-otp.ftl":
-                import("./login-reset-otp.css");
+            case "webauthn-register.ftl":
+                import("./webauthn-register.css");
                 break;
         }
         switch (kcContext.themeName) {

@@ -252,16 +252,6 @@ Social logins
     border-radius: 5px;
 }
 
-/*
-Buttons
-*/
-.kcButtonLargeClass {
-    font-weight: bold;
-    font-size: 22px !important;
-    height: 60px;
-    min-width: 80px;
-    padding: 0px 20px;
-}
 
 #kc-delete-text {
     margin-bottom: 20px;
