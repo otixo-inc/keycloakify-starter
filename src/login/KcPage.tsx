@@ -103,10 +103,7 @@ function useCustomCss(kcContext: KcContext) {
         switch (kcContext.pageId) {
             case "login.ftl":
             case "register.ftl":
-            case "login-reset-password.ftl":
             case "login-verify-email-code.ftl":
-            case "login-update-password.ftl":
-            case "login-password.ftl":
                 import("./button.css");
                 break;
         }
