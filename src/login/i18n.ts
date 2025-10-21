@@ -72,7 +72,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "register.backToLogin": "Anmelden",
       "error-invalid-credentials": "Ungültige E-Mail-Adresse oder ungültiges Passwort",
       "webauthn-error-register-verification": "Das Hinzufügen des Passkeys ist fehlgeschlagen. Bitte versuche es erneut.",
-      "webauthn-registration-info": "<p>Passkeys validate your identity using touch, facial recognition, a device password, or a PIN.</p><p>When you click <strong>Register</strong> your device will guide you through the Passkey registration process.</p>"
+      "webauthn-registration-info": "<p>Passkeys bestätigen Ihre Identität mithilfe von Fingerabdruck, Gesichtserkennung, Gerätepasswort oder PIN.</p><p>Wenn Sie auf <strong>Registrieren</strong> klicken, führt Ihr Gerät Sie durch den Passkey-Registrierungsprozess.</p>"
     }
     // cspell: enable
   }).build();
