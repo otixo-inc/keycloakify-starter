@@ -135,6 +135,9 @@ function useCustomCss(kcContext: KcContext) {
             case "webauthn-register.ftl":
                 import("./webauthn-register.css");
                 break;
+            case "login-recovery-authn-code-config.ftl":
+                import("./login-recovery-authn-code-config.css");
+                break;
         }
         switch (kcContext.themeName) {
             case "weteam-hide-idp":

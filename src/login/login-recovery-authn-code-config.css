@@ -1,0 +1,12 @@
+#kcRecoveryCodesConfirmationCheck {
+    margin-right: 8px;
+}
+
+label[for="kcRecoveryCodesConfirmationCheck"],
+#logout-sessions {
+    cursor: pointer;
+}
+
+.kcFormOptionsClass {
+  padding-left: initial !important;
+}
