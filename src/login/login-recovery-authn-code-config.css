@@ -10,3 +10,7 @@ label[for="kcRecoveryCodesConfirmationCheck"],
 .kcFormOptionsClass {
   padding-left: initial !important;
 }
+
+input#saveRecoveryAuthnCodesBtn {
+    margin-right: 10px;
+}
