@@ -108,6 +108,9 @@ function useCustomCss(kcContext: KcContext) {
                 break;
         }
         switch (kcContext.pageId) {
+            case "login-config-totp.ftl":
+                import("./login-config-totp.css");
+                break;
             case "terms.ftl":
                 import("./terms.css");
                 break;

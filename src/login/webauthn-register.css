@@ -1,3 +1,17 @@
-.kcWebAuthnKeyIcon{
-  display: none;
+.kcWebAuthnKeyIcon {
+    display: none;
+}
+
+#authenticateWebAuthnButton,
+#cancelWebAuthnAIA {
+    display: inline;
+    width: initial;
+}
+
+#authenticateWebAuthnButton {
+    margin-right: 10px;
+}
+
+#kc-webauthn-settings-form {
+    display: inline;
 }
