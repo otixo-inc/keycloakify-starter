@@ -66,11 +66,11 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "newsletter.yes": "Ich möchte Tipps, News und Angebote zu We.Team per E-Mail erhalten.",
       "acceptTerms": "Mit deiner Registrierung stimmst du den <a href='https://we.team/nutzungsbedingungen-basic' target='_blank' rel='noopener noreferrer'>Nutzungsbedingungen</a> und <a href='https://we.team/datenschutzrichtlinie-basic' target='_blank' rel='noopener noreferrer'>Datenschutzrichtlinie</a> von We.Team zu",
       "termsText": "Mit deiner Registrierung stimmst du den <a href='https://we.team/nutzungsbedingungen-basic' target='_blank' rel='noopener noreferrer'>Nutzungsbedingungen</a> und <a href='https://we.team/datenschutzrichtlinie-basic' target='_blank' rel='noopener noreferrer'>Datenschutzrichtlinie</a> von We.Team zu",
-      registrationTermsText: "By continuing you agree to We.Team’s <a href='https://we.team/nutzungsbedingungen-basic' target='_blank' rel='noopener noreferrer'>Nutzungsbedingungen</a> and <a href='https://we.team/datenschutzrichtlinie-basic' target='_blank' rel='noopener noreferrer'>Datenschutzrichtlinie</a>",
+      registrationTermsText: "Mit deiner Registrierung stimmst du den <a href='https://we.team/nutzungsbedingungen-basic' target='_blank' rel='noopener noreferrer'>Nutzungsbedingungen</a> und <a href='https://we.team/datenschutzrichtlinie-basic' target='_blank' rel='noopener noreferrer'>Datenschutzrichtlinie</a> von We.Team zu",
       "alreadyHaveAnAccount": "Du hast bereits ein Konto?",
       "register.backToLogin": "Anmelden",
       "error-invalid-credentials": "Ungültige E-Mail-Adresse oder ungültiges Passwort",
-      "webauthn-error-register-verification": "There was an error adding your Passkey. Please try again."
+      "webauthn-error-register-verification": "Das Hinzufügen des Passkeys ist fehlgeschlagen. Bitte versuche es erneut."
     }
     // cspell: enable
   }).build();
