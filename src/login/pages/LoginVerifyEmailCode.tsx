@@ -1,12 +1,16 @@
+import React from "react";
 import { getKcClsx } from "keycloakify/login/lib/kcClsx";
+import { clsx } from "keycloakify/tools/clsx";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
+import PinField from "react-pin-field";
 
 import "./LoginVerifyEmailCode.css";
 
 export default function LoginVerifyEmailCode(props: PageProps<Extract<KcContext, { pageId: "login-verify-email-code.ftl" }>, I18n>) {
     const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
+    const formRef = React.useRef<HTMLFormElement>(null);
 
     const { kcClsx } = getKcClsx({
         doUseDefaultCss,
@@ -35,7 +39,7 @@ export default function LoginVerifyEmailCode(props: PageProps<Extract<KcContext,
             headerNode={msg("emailVerifyTitle")}
         >
             <p className="instruction">{msg("emailVerifyInstruction1", user.email)}</p>
-            <form id="kc-verify-email-code-form" className={kcClsx("kcFormClass")} action={url.loginAction} method="post">
+            <form ref={formRef} id="kc-verify-email-code-form" className={kcClsx("kcFormClass")} action={url.loginAction} method="post">
                 <div className={kcClsx("kcFormGroupClass", messagesPerField.printIfExists("email_code", "kcFormGroupErrorClass"))}>
                     <div className={kcClsx("kcLabelWrapperClass")}>
                         <label htmlFor="email_code" className={kcClsx("kcLabelClass")}>
@@ -43,42 +47,29 @@ export default function LoginVerifyEmailCode(props: PageProps<Extract<KcContext,
                         </label>
                     </div>
                     <div className={kcClsx("kcInputWrapperClass")}>
-                        <input
-                            type="text"
-                            id="email_code"
+                        <PinField
+                            autoFocus
+                            length={6}
                             name="email_code"
-                            className={kcClsx("kcInputClass")}
-                            aria-invalid={messagesPerField.exists("email_code")}
+                            className={clsx(kcClsx("kcInputClass"), "pin-field")}
+                            onComplete={() => {
+                                formRef.current?.submit();
+                            }}
                         />
                     </div>
                 </div>
 
-                <div className={kcClsx("kcFormGroupClass")}>
-                    <div id="kc-form-options" className={kcClsx("kcFormOptionsClass")}>
-                        <div className={kcClsx("kcFormOptionsWrapperClass")}></div>
-                    </div>
-
-                    <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                        {isAppInitiatedAction ? (
+                {isAppInitiatedAction && (
+                    <div className={kcClsx("kcFormGroupClass")}>
+                        <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
                             <div className="verifyButtons">
-                                <input
-                                    className={kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonLargeClass")}
-                                    type="submit"
-                                    value={msgStr("doSubmit")}
-                                />
                                 <button className={kcClsx("kcButtonClass", "kcButtonDefaultClass")} type="submit" name="cancel-aia" value="true">
                                     {msgStr("doCancel")}
                                 </button>
                             </div>
-                        ) : (
-                            <input
-                                className={kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonBlockClass", "kcButtonLargeClass")}
-                                type="submit"
-                                value={msgStr("doSubmit")}
-                            />
-                        )}
+                        </div>
                     </div>
-                </div>
+                )}
             </form>
         </Template>
     );

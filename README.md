@@ -56,3 +56,8 @@ To release a new version **just update the `package.json` version and push**.
 
 To enable the workflow go to your fork of this repository on GitHub then navigate to:
 `Settings` > `Actions` > `Workflow permissions`, select `Read and write permissions`.
+
+# Disable https
+
+./kcadm.sh config credentials --server http://localhost:8080 --realm master --user admin
+./kcadm.sh update realms/master -s sslRequired=NONE

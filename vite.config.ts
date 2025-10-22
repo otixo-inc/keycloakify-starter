@@ -14,7 +14,7 @@ export default defineConfig({
           "--spi-required-action-VERIFY_EMAIL_CODE-code-length=6",
           "--spi-required-action-VERIFY_EMAIL_CODE-code-symbols=0123456789",
         ],
-        extensionJars: ["https://github.com/RedFroggy/keycloak-verify-email-by-code/releases/download/v26.2.0/keycloak-verify-email-by-code-26.2.0.jar"]
+        extensionJars: ["https://github.com/otixo-inc/keycloak-verify-email-by-code/releases/download/v26.2.0/keycloak-verify-email-by-code-26.2.0.jar"]
       }
     })
   ]

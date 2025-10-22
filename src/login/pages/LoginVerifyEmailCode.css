@@ -6,3 +6,26 @@
     width: 100%;
     margin-bottom: 20px;
 }
+
+.kcInputWrapperClass {
+    display: flex;
+    justify-content: center;
+}
+
+.pin-field {
+    width: 70px !important;
+    height: 70px !important;
+    margin: 0 3px !important;
+    text-align: center !important;
+}
+
+@media (max-width: 500px) {
+    .pin-field {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+#kc-info-wrapper {
+  padding-top: 0px !important;
+}
