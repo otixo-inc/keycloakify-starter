@@ -158,15 +158,17 @@ Form Card
     padding: 20px !important;
 }
 
-.kcFormCardClass:after {
-    content: "";
-    position: absolute;
-    background: url(dots.svg) no-repeat;
-    right: -57px;
-    top: -57px;
-    height: 192px;
-    width: 170px;
-    z-index: -1;
+@media (min-width: 768px) {
+    .kcFormCardClass:after {
+        content: "";
+        position: absolute;
+        background: url(dots.svg) no-repeat;
+        right: -57px;
+        top: -57px;
+        height: 192px;
+        width: 170px;
+        z-index: -1;
+    }
 }
 
 @media (max-width: 767px) {
@@ -252,14 +254,13 @@ Social logins
     border-radius: 5px;
 }
 
-
 #kc-delete-text {
     margin-bottom: 20px;
 }
 
 .alert {
     border-radius: 4px;
-    border:none !important;
+    border: none !important;
 }
 
 .kcRecoveryCodesWarning {
