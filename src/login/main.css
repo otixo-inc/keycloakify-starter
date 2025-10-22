@@ -21,6 +21,10 @@ body {
     line-height: 20px;
 }
 
+.login-pf-page {
+    padding-bottom: 20px;
+}
+
 a {
     color: #00c5e7;
 }
