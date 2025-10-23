@@ -10,11 +10,23 @@ export default defineConfig({
       accountThemeImplementation: "none",
       themeName: ["weteam", "weteam-hide-idp"],
       startKeycloakOptions: {
+        dockerExtraArgs: [
+          "-e KC_HTTPS_REQUIRED=none",
+          "-e KC_HTTP_ENABLED=true",
+          "-e KC_HOSTNAME_STRICT=false",
+          "-e KC_PROXY_HEADERS=xforwarded",
+          "-e KC_FEATURES=token-exchange,admin-fine-grained-authz",
+        ],
         keycloakExtraArgs: [
           "--spi-required-action-VERIFY_EMAIL_CODE-code-length=6",
           "--spi-required-action-VERIFY_EMAIL_CODE-code-symbols=0123456789",
         ],
-        extensionJars: ["https://github.com/otixo-inc/keycloak-verify-email-by-code/releases/download/v26.2.0/keycloak-verify-email-by-code-26.2.0.jar"]
+        extensionJars: [
+          //"https://github.com/klausbetz/apple-identity-provider-keycloak/releases/download/1.15.0/apple-identity-provider-1.15.0.jar",
+          "https://github.com/otixo-inc/keycloak-verify-email-by-code/releases/download/v26.2.0/keycloak-verify-email-by-code-26.2.0.jar",
+          "./apple-identity-provider-1.15.0.jar",
+          "./keycloak-otixo-spi.jar"
+        ]
       }
     })
   ]
