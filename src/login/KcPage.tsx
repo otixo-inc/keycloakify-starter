@@ -138,11 +138,6 @@ function useCustomCss(kcContext: KcContext) {
             case "login-recovery-authn-code-config.ftl":
                 import("./login-recovery-authn-code-config.css");
                 break;
-        }
-        switch (kcContext.themeName) {
-            case "weteam-hide-idp":
-                import("./hide-identity-providers.css");
-                break;
-        }
+        }        
     }, []);
 }

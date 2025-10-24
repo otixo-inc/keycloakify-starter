@@ -8,9 +8,9 @@ export default defineConfig({
     react(),
     keycloakify({
       accountThemeImplementation: "none",
-      themeName: ["weteam", "weteam-hide-idp"],
+      themeName: ["weteam"],
       startKeycloakOptions: {
-        dockerImage: 'quay.io/keycloak/keycloak:26.4.1',
+        dockerImage: 'quay.io/keycloak/keycloak:26.4.2',
         dockerExtraArgs: [
           "-e KC_HTTPS_REQUIRED=none",
           "-e KC_HTTP_ENABLED=true",
