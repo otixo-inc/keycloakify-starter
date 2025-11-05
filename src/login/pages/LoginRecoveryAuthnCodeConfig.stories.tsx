@@ -16,6 +16,10 @@ export const Default: Story = {
     render: () => <KcPageStory />
 };
 
+export const IOS: Story = {
+    render: () => <KcPageStory kcContext={{ themeName: "weteam-ios" }} />
+};
+
 /**
  * WithErrorDuringCodeGeneration:
  * - Purpose: Tests when an error occurs while generating recovery authentication codes.

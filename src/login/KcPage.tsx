@@ -137,7 +137,10 @@ function useCustomCss(kcContext: KcContext) {
                 break;
             case "login-recovery-authn-code-config.ftl":
                 import("./login-recovery-authn-code-config.css");
+                if (kcContext.themeName === "weteam-ios") {
+                    import("./login-recovery-authn-code-config-ios.css");
+                }
                 break;
-        }        
+        }
     }, []);
 }
