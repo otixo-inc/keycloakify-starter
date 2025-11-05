@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     keycloakify({
       accountThemeImplementation: "none",
-      themeName: ["weteam"],
+      themeName: ["weteam", "weteam-ios"],
       startKeycloakOptions: {
         dockerImage: 'quay.io/keycloak/keycloak:26.4.2',
         dockerExtraArgs: [

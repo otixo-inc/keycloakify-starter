@@ -38,7 +38,11 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "error-invalid-credentials": "Invalid email address or invalid password",
       "webauthn-error-register-verification": "There was an error adding your passkey. Please try again.",
       "webauthn-registration-info": "<p>Passkeys validate your identity using touch, facial recognition, a device password, or a PIN.</p><p>When you click <strong>Register</strong> your device will guide you through the Passkey registration process.</p>",
-      pageExpiredMsg1: "To restart the login process "
+      pageExpiredMsg1: "To restart the login process ",
+      "recovery-code-config-warning-message": {
+        "weteam": "Make sure to print, download, or copy them to a password manager and keep them save. Canceling this setup will remove these recovery codes from your account.",
+        "weteam-ios": "Make sure to copy them to a password manager and keep them save. Canceling this setup will remove these recovery codes from your account."
+      }
     },
     // cspell: disable
     de: {
@@ -74,7 +78,11 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "error-invalid-credentials": "Ungültige E-Mail-Adresse oder ungültiges Passwort",
       "webauthn-error-register-verification": "Das Hinzufügen des Passkeys ist fehlgeschlagen. Bitte versuche es erneut.",
       "webauthn-registration-info": "<p>Passkeys bestätigen Ihre Identität mithilfe von Fingerabdruck, Gesichtserkennung, Gerätepasswort oder PIN.</p><p>Wenn Sie auf <strong>Registrieren</strong> klicken, führt Ihr Gerät Sie durch den Passkey-Registrierungsprozess.</p>",
-      pageExpiredMsg1: "Um den Anmeldevorgang neu zu starten "
+      pageExpiredMsg1: "Um den Anmeldevorgang neu zu starten ",
+      "recovery-code-config-warning-message": {
+        "weteam": "Drucken Sie sie aus, laden Sie sie herunter oder kopieren Sie sie in einen Passwort-Manager und speichern Sie sie. Wenn Sie diese Einrichtung abbrechen, werden die Wiederherstellungscodes von Ihrem Konto entfernt.",
+        "weteam-ios": "Kopieren Sie sie in einen Passwort-Manager und speichern Sie sie. Wenn Sie diese Einrichtung abbrechen, werden die Wiederherstellungscodes von Ihrem Konto entfernt.",
+      }
     }
     // cspell: enable
   }).build();
