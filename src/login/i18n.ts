@@ -42,7 +42,8 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "recovery-code-config-warning-message": {
         "weteam": "Make sure to print, download, or copy them to a password manager and keep them save. Canceling this setup will remove these recovery codes from your account.",
         "weteam-ios": "Make sure to copy them to a password manager and keep them save. Canceling this setup will remove these recovery codes from your account."
-      }
+      },
+      "recovery-codes-copied-complete": "Recovery codes copied to clipboard"
     },
     // cspell: disable
     de: {
@@ -82,7 +83,8 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "recovery-code-config-warning-message": {
         "weteam": "Drucken Sie sie aus, laden Sie sie herunter oder kopieren Sie sie in einen Passwort-Manager und speichern Sie sie. Wenn Sie diese Einrichtung abbrechen, werden die Wiederherstellungscodes von Ihrem Konto entfernt.",
         "weteam-ios": "Kopieren Sie sie in einen Passwort-Manager und speichern Sie sie. Wenn Sie diese Einrichtung abbrechen, werden die Wiederherstellungscodes von Ihrem Konto entfernt.",
-      }
+      },
+      "recovery-codes-copied-complete": "Wiederherstellungscodes in die Zwischenablage kopiert"
     }
     // cspell: enable
   }).build();

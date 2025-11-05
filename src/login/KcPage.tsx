@@ -12,6 +12,9 @@ const LoginVerifyEmailCode = lazy(() => import("./pages/LoginVerifyEmailCode"));
 const Register = lazy(() => import("./pages/Register"));
 const Login = lazy(() => import("./pages/Login"));
 const WebauthnRegister = lazy(() => import("./pages/WebauthnRegister"));
+const LoginRecoveryAuthnCodeConfig = lazy(
+    () => import("./pages/LoginRecoveryAuthnCodeConfig")
+);
 
 const UserProfileFormFields = lazy(() => import("./UserProfileFormFields"));
 
@@ -41,6 +44,14 @@ export default function KcPage(props: { kcContext: KcContext }) {
             </Helmet> */}
             {(() => {
                 switch (kcContext.pageId) {
+                    case "login-recovery-authn-code-config.ftl":
+                        return (
+                            <LoginRecoveryAuthnCodeConfig
+                                {...{ kcContext, i18n, classes }}
+                                Template={Template}
+                                doUseDefaultCss={true}
+                            />
+                        );
                     case "webauthn-register.ftl":
                         return (
                             <WebauthnRegister

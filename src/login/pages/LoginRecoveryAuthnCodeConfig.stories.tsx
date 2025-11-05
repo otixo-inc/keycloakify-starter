@@ -17,7 +17,7 @@ export const Default: Story = {
 };
 
 export const IOS: Story = {
-    render: () => <KcPageStory kcContext={{ themeName: "weteam-ios", locale: { currentLanguageTag: "en" } }} />
+    render: () => <KcPageStory kcContext={{ themeName: "weteam-ios", locale: { currentLanguageTag: "de" } }} />
 };
 
 /**

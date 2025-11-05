@@ -267,7 +267,8 @@ Social logins
     border: none !important;
 }
 
-.kcRecoveryCodesWarning {
+.kcRecoveryCodesWarning,
+.kcRecoveryCodesSuccess {
     border-radius: 4px;
     border-top: none;
     margin-top: 5px;
