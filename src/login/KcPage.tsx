@@ -15,6 +15,7 @@ const WebauthnRegister = lazy(() => import("./pages/WebauthnRegister"));
 const LoginRecoveryAuthnCodeConfig = lazy(
     () => import("./pages/LoginRecoveryAuthnCodeConfig")
 );
+const Error = lazy(() => import("./pages/Error"));
 const WebauthnError = lazy(() => import("./pages/WebauthnError"));
 const UserProfileFormFields = lazy(() => import("./UserProfileFormFields"));
 
@@ -44,6 +45,13 @@ export default function KcPage(props: { kcContext: KcContext }) {
             </Helmet> */}
             {(() => {
                 switch (kcContext.pageId) {
+                                      case "error.ftl": return (
+                        <Error
+                            {...{ kcContext, i18n, classes }}
+                            Template={Template}
+                            doUseDefaultCss={true}
+                        />
+                    );
                     case "webauthn-error.ftl":
                         return (
                             <WebauthnError
