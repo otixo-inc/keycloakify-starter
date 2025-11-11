@@ -45,13 +45,14 @@ export default function KcPage(props: { kcContext: KcContext }) {
             </Helmet> */}
             {(() => {
                 switch (kcContext.pageId) {
-                                      case "error.ftl": return (
-                        <Error
-                            {...{ kcContext, i18n, classes }}
-                            Template={Template}
-                            doUseDefaultCss={true}
-                        />
-                    );
+                    case "error.ftl":
+                        return (
+                            <Error
+                                {...{ kcContext, i18n, classes }}
+                                Template={Template}
+                                doUseDefaultCss={true}
+                            />
+                        );
                     case "webauthn-error.ftl":
                         return (
                             <WebauthnError
