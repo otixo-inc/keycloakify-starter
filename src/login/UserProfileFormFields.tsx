@@ -37,13 +37,20 @@ export default function UserProfileFormFields(props: UserProfileFormFieldsProps<
     return (
         <>
             {formFieldStates.map(({ attribute, displayableErrors, valueOrValues }) => {
+                /**
+                 * We.Team
+                 * Ensure timezone is always set
+                 */
+                if (attribute.name === "timezone") {
+                    valueOrValues = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                }
 
-              /**
-               * We.Team
-               * Ensure timezone is always set
-               */
-                if (attribute.name==="timezone") {
-                  valueOrValues = Intl.DateTimeFormat().resolvedOptions().timeZone
+                if (kcContext.pageId === "register.ftl" && (attribute.name === "firstName" || attribute.name === "lastName")) {
+                    return null;
+                }
+
+                if (kcContext.pageId === "login-update-profile.ftl" && (attribute.name === "timezone" || attribute.name === "newsletter")) {
+                    return null;
                 }
 
                 return (
