@@ -44,8 +44,8 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
         "weteam-ios": "Make sure to copy them to a password manager and keep them save. Canceling this setup will remove these recovery codes from your account."
       },
       "recovery-codes-copied-complete": "Recovery codes copied to clipboard",
-      "updatePasswordTitle": "Enter a password",
-      "loginProfileTitle": "Enter your name"
+      "updatePasswordTitle": "Please create a password",
+      "loginProfileTitle": "Please enter your name"
     },
     // cspell: disable
     de: {
