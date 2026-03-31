@@ -14,6 +14,9 @@ import type { Attribute } from "keycloakify/login/KcContext";
 import type { KcContext } from "./KcContext";
 import type { I18n } from "./i18n";
 
+const TEMPORARY_FIRST_NAME_VALUE = "firstName";
+const TEMPORARY_LAST_NAME_VALUE = "lastName";
+
 export default function UserProfileFormFields(props: UserProfileFormFieldsProps<KcContext, I18n>) {
     const { kcContext, i18n, kcClsx, onIsFormSubmittableValueChange, doMakeUserConfirmPassword, BeforeField, AfterField } = props;
 
@@ -44,13 +47,33 @@ export default function UserProfileFormFields(props: UserProfileFormFieldsProps<
                 if (attribute.name === "timezone") {
                     valueOrValues = Intl.DateTimeFormat().resolvedOptions().timeZone;
                 }
-
-                if (kcContext.pageId === "register.ftl" && (attribute.name === "firstName" || attribute.name === "lastName")) {
-                    return null;
+                /**
+                 * We pre-fill the first and last name on the registration form to bypass validation.
+                 * Clear those values when the users arrives on the page to enter their name
+                 */
+                if (kcContext.pageId === "login-update-profile.ftl") {
+                    if (attribute.name === "firstName" && valueOrValues === TEMPORARY_FIRST_NAME_VALUE) {
+                        valueOrValues = "";
+                    }
+                    if (attribute.name === "lastName" && valueOrValues === TEMPORARY_LAST_NAME_VALUE) {
+                        valueOrValues = "";
+                    }
+                    if (attribute.name === "timezone" || attribute.name === "newsletter") {
+                        return null;
+                    }
                 }
-
-                if (kcContext.pageId === "login-update-profile.ftl" && (attribute.name === "timezone" || attribute.name === "newsletter")) {
-                    return null;
+                /***
+                 * First and last name are hidden on the register form.
+                 * They are still required by keycloak, so we enter temporary values to
+                 * bypass validation
+                 */
+                if (kcContext.pageId === "register.ftl") {
+                    if (attribute.name === "firstName") {
+                        valueOrValues = TEMPORARY_FIRST_NAME_VALUE;
+                    }
+                    if (attribute.name === "lastName") {
+                        valueOrValues = TEMPORARY_LAST_NAME_VALUE;
+                    }
                 }
 
                 return (

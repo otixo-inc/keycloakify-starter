@@ -1,15 +1,17 @@
 /*
   hide timezone field
 */
-.kcFormGroupClass:has(input#timezone) {
+.kcFormGroupClass:has(input#timezone),
+.kcFormGroupClass:has(input#firstName),
+.kcFormGroupClass:has(input#lastName) {
     display: none;
 }
 
 /*
   hide newsletter and terms of service labels
 */
-.kcLabelWrapperClass:has(label[for=tos]),
-.kcLabelWrapperClass:has(label[for=newsletter]) {
+.kcLabelWrapperClass:has(label[for="tos"]),
+.kcLabelWrapperClass:has(label[for="newsletter"]) {
     display: none;
 }
 
@@ -95,9 +97,9 @@
 }
 
 .backToLogin {
-  margin-top: 20px;
-  text-align: center;
+    margin-top: 20px;
+    text-align: center;
 }
 .backToLogin span {
-  display: inline !important;
+    display: inline !important;
 }
