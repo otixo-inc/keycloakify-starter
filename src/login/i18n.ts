@@ -87,8 +87,8 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
         "weteam-ios": "Kopieren Sie sie in einen Passwort-Manager und speichern Sie sie. Wenn Sie diese Einrichtung abbrechen, werden die Wiederherstellungscodes von Ihrem Konto entfernt.",
       },
       "recovery-codes-copied-complete": "Wiederherstellungscodes in die Zwischenablage kopiert",
-      "updatePasswordTitle": "Passwort eingeben",
-      "loginProfileTitle": "Namen eingeben"
+      "updatePasswordTitle": "Bitte erstelle ein Passwort",
+      "loginProfileTitle": "Bitte gib deinen Namen ein"
     }
     // cspell: enable
   }).build();
