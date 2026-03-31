@@ -50,7 +50,7 @@ export default function Register(props: RegisterProps) {
 
     const { msg, msgStr, advancedMsg } = i18n;
 
-    const [isFormSubmittable, setIsFormSubmittable] = useState(false);
+    const [, /*isFormSubmittable,*/ setIsFormSubmittable] = useState(false);
     const [areTermsAccepted, setAreTermsAccepted] = useState(false);
 
     // console.log("url.loginUrl", url.loginUrl);
@@ -166,7 +166,9 @@ export default function Register(props: RegisterProps) {
                         ) : (
                             <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
                                 <input
-                                    disabled={!isFormSubmittable || (termsAcceptanceRequired && !areTermsAccepted)}
+                                    // because we have hidden required fields, isFormSubmittable will never be true
+                                    //disabled={!isFormSubmittable || (termsAcceptanceRequired && !areTermsAccepted)}
+                                    disabled={termsAcceptanceRequired && !areTermsAccepted}
                                     className={kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonBlockClass", "kcButtonLargeClass")}
                                     type="submit"
                                     value={msgStr("doRegister")}
