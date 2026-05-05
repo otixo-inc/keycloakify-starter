@@ -160,6 +160,11 @@ function useCustomCss(kcContext: KcContext) {
             case "register.ftl":
                 import("./register.css");
                 break;
+            case "login.ftl":
+                if (kcContext.themeName === "weteam-macos") {
+                    import("./login.css");
+                }
+                break;
             case "login-otp.ftl":
                 import("./login-otp.css");
                 break;

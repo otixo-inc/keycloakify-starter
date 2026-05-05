@@ -42,6 +42,10 @@ export const WithInvalidCredential: Story = {
     )
 };
 
+export const MacOs: Story = {
+    render: () => <KcPageStory kcContext={{ themeName: "weteam-macos", locale: { currentLanguageTag: "de" } }} />
+};
+
 export const WithoutRegistration: Story = {
     render: () => (
         <KcPageStory
