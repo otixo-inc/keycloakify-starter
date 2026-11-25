@@ -11,6 +11,7 @@ import type { ReactNode } from "react";
 
 import MessageImage from "./message.svg";
 import IdCard from "./id-card.svg";
+import LockImage from "./Lock.svg";
 
 import styles from "./Template.module.css";
 
@@ -80,6 +81,14 @@ function Sidebar(props: SidebarProps) {
                         title={props.i18n.msg("template.sidebar.reset-password.title")}
                         subtitle={props.i18n.msg("template.sidebar.reset-password.subtitle")}
                         image={<img src={MessageImage} />}
+                    />
+                );
+            case "login-update-password.ftl":
+                return (
+                    <SidebarContentLayout
+                        title={props.i18n.msg("template.sidebar.update-password.title")}
+                        subtitle={props.i18n.msg("template.sidebar.update-password.subtitle")}
+                        image={<img src={LockImage} />}
                     />
                 );
         }
