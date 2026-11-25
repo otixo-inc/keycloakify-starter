@@ -82,6 +82,7 @@ export default function Register(props: RegisterProps) {
                     msg("registerTitle")
                 )
             }
+            subheaderNode={invitationTokenFinal ? undefined : msg("registerSubtitle")}
             displayMessage={messagesPerField.exists("global")}
             displayRequiredFields={false}
         >

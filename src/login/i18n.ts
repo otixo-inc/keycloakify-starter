@@ -6,7 +6,8 @@ import type { ThemeName } from "../kc.gen";
 const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
   .withCustomTranslations({
     en: {
-      registerTitle: "Sign Up for Free",
+      registerTitle: "Create an account",
+      registerSubtitle: "Get started with your work email",
       loginAccountTitle: "Welcome back! Sign In",
       loginTitleHtml: "",
       noAccount: "You do not have an account?",
@@ -54,7 +55,8 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
     },
     // cspell: disable
     de: {
-      registerTitle: "Registriere dich kostenfrei",
+      registerTitle: "Create an account",
+      registerSubtitle: "Get started with your work email",
       loginAccountTitle: "Willkommen zurück! Melde dich an",
       loginTitleHtml: "",
       noAccount: "Du hast noch kein Konto?",
