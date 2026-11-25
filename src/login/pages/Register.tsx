@@ -96,31 +96,7 @@ export default function Register(props: RegisterProps) {
             )}
             <div className={invitationTokenFinal ? "ui tab" : ""}>
                 {invitationTokenFinal && <div className="message">{msg("registerInvitation", ownerNameFinal, invitationWorkspaceNameFinal)}</div>}
-                {!hideIdp && social?.providers !== undefined && social.providers.length !== 0 && (
-                    <div id="kc-social-providers" className={kcClsx("kcFormSocialAccountSectionClass")}>
-                        <ul className={kcClsx("kcFormSocialAccountListClass", social.providers.length > 3 && "kcFormSocialAccountListGridClass")}>
-                            {social.providers.map((...[p, , providers]) => (
-                                <li key={p.alias}>
-                                    <a
-                                        id={`social-${p.alias}`}
-                                        className={kcClsx(
-                                            "kcFormSocialAccountListButtonClass",
-                                            providers.length > 3 && "kcFormSocialAccountGridItem"
-                                        )}
-                                        type="button"
-                                        href={p.loginUrl}
-                                    >
-                                        {p.iconClasses && <i className={clsx(kcClsx("kcCommonLogoIdP"), p.iconClasses)} aria-hidden="true"></i>}
-                                        <span className={clsx(kcClsx("kcFormSocialAccountNameClass"), p.iconClasses && "kc-social-icon-text")}>
-                                            {msg("providerSignUp", kcSanitize(p.displayName))}
-                                        </span>
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                        <h2>{msg("identity-provider-divider-label")}</h2>
-                    </div>
-                )}
+
                 <form id="kc-register-form" className={kcClsx("kcFormClass")} action={url.registrationAction} method="post">
                     <UserProfileFormFields
                         kcContext={kcContext}
@@ -177,8 +153,33 @@ export default function Register(props: RegisterProps) {
                         )}
                     </div>
                 </form>
+                {!hideIdp && social?.providers !== undefined && social.providers.length !== 0 && (
+                    <div id="kc-social-providers" className={kcClsx("kcFormSocialAccountSectionClass")}>
+                        <h2 className="kcOrDivider">{msg("identity-provider-divider-label")}</h2>
+                        <ul className={kcClsx("kcFormSocialAccountListClass", social.providers.length > 3 && "kcFormSocialAccountListGridClass")}>
+                            {social.providers.map((...[p, , providers]) => (
+                                <li key={p.alias}>
+                                    <a
+                                        id={`social-${p.alias}`}
+                                        className={kcClsx(
+                                            "kcFormSocialAccountListButtonClass",
+                                            providers.length > 3 && "kcFormSocialAccountGridItem"
+                                        )}
+                                        type="button"
+                                        href={p.loginUrl}
+                                    >
+                                        {p.iconClasses && <i className={clsx(kcClsx("kcCommonLogoIdP"), p.iconClasses)} aria-hidden="true"></i>}
+                                        <span className={clsx(kcClsx("kcFormSocialAccountNameClass"), p.iconClasses && "kc-social-icon-text")}>
+                                            {msg("providerSignUp", kcSanitize(p.displayName))}
+                                        </span>
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
                 {!invitationTokenFinal && (
-                    <div id="kc-form-options" className={`${clsx("kcFormOptionsClass")} backToLogin`}>
+                    <div id="kc-form-options" className={`${clsx("kcFormOptionsClass")} backToLogin pt-5`}>
                         <div className={kcClsx("kcFormOptionsWrapperClass")}>
                             <span>
                                 {msg("alreadyHaveAnAccount")}&nbsp;<a href={url.loginUrl}>{msg("register.backToLogin")}</a>

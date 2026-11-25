@@ -177,7 +177,8 @@ Sign up
 Social logins
 */
 .kcFormSocialAccountListButtonClass {
-    padding: 19px;
+    padding: 0.5625rem var(--spacing-spacing-16, 1rem);
+    text-decoration: none;
 }
 .kcFormSocialAccountListButtonClass::after {
     border-radius: 50px !important;
@@ -200,6 +201,20 @@ Social logins
     margin: "";
     line-height: 1;
     text-align: center;
+}
+
+.kcOrDivider span {
+    display: flex;
+    padding: var(--spacing-spacing-04, 0.25rem) var(--spacing-spacing-20, 1.25rem);
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: var(--radius-xxxl, 6.1875rem);
+    background: var(--color-surface-tertiary, #e8ebed);
+
+    color: var(--color-text-primary, #1c1c1c);
+    font-size: 0.8125rem;
+    line-height: 1.125rem; /* 138.462% */
 }
 
 .kcOrDivider:before,
