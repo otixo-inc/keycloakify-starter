@@ -74,6 +74,14 @@ function Sidebar(props: SidebarProps) {
                         image={<img src={IdCard} />}
                     />
                 );
+            case "login-reset-password.ftl":
+                return (
+                    <SidebarContentLayout
+                        title={props.i18n.msg("template.sidebar.reset-password.title")}
+                        subtitle={props.i18n.msg("template.sidebar.reset-password.subtitle")}
+                        image={<img src={MessageImage} />}
+                    />
+                );
         }
         return null;
     };

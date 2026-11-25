@@ -24,8 +24,9 @@ export default function LoginResetPassword(props: PageProps<Extract<KcContext, {
             classes={classes}
             displayInfo
             displayMessage={!messagesPerField.existsError("username")}
-            infoNode={realm.duplicateEmailsAllowed ? msg("emailInstructionUsername") : msg("emailInstruction")}
+            // infoNode={realm.duplicateEmailsAllowed ? msg("emailInstructionUsername") : msg("emailInstruction")}
             headerNode={msg("emailForgotTitle")}
+            subheaderNode={msg("emailForgotSubtitle")}
         >
             <form id="kc-reset-password-form" className={kcClsx("kcFormClass")} action={url.loginAction} method="post">
                 <div className={kcClsx("kcFormGroupClass")}>
@@ -73,7 +74,7 @@ export default function LoginResetPassword(props: PageProps<Extract<KcContext, {
                         <input
                             className={kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonBlockClass", "kcButtonLargeClass")}
                             type="submit"
-                            value={msgStr("doSubmit")}
+                            value={msgStr("emailForgotTitleButton")}
                         />
                     </div>
                 </div>
