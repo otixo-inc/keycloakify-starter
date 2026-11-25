@@ -33,7 +33,8 @@ export default function LoginUpdateProfile(props: LoginUpdateProfileProps) {
             doUseDefaultCss={doUseDefaultCss}
             classes={classes}
             displayRequiredFields
-            headerNode={msg("loginProfileTitle")}
+            headerNode={msg("loginUpdateProfileTitle")}
+            subheaderNode={msg("loginUpdateProfileSubtitle")}
             displayMessage={messagesPerField.exists("global")}
         >
             <form id="kc-update-profile-form" className={kcClsx("kcFormClass")} action={url.loginAction} method="post">
@@ -58,7 +59,7 @@ export default function LoginUpdateProfile(props: LoginUpdateProfileProps) {
                                 "kcButtonLargeClass"
                             )}
                             type="submit"
-                            value={msgStr("doSubmit")}
+                            value={msgStr("loginUpdateProfileNext")}
                         />
                         {isAppInitiatedAction && (
                             <button
