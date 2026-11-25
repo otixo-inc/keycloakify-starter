@@ -56,7 +56,12 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "template.sidebar.verify.title": "You’re one step closer",
       "template.sidebar.verify.subtitle": "We’ve sent a verification code to your email",
       "template.sidebar.update-profile.title": "Nice to meet you",
-      "template.sidebar.update-profile.subtitle": "How would you like your Teammates to see you"
+      "template.sidebar.update-profile.subtitle": "How would you like your Teammates to see you",
+      "template.sidebar.reset-password.title": "Happens to everyone",
+      "template.sidebar.reset-password.subtitle": "We'll help you back in",
+      "emailForgotTitle": "Reset your password",
+      "emailForgotTitleButton": "Send reset link",
+      "emailForgotSubtitle": "We will email you a link to reset password"
     },
     // cspell: disable
     de: {
@@ -110,7 +115,12 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "template.sidebar.verify.title": "You’re one step closer",
       "template.sidebar.verify.subtitle": "We’ve sent a verification code to your email",
       "template.sidebar.update-profile.title": "Nice to meet you",
-      "template.sidebar.update-profile.subtitle": "How would you like your Teammates to see you"
+      "template.sidebar.update-profile.subtitle": "How would you like your Teammates to see you",
+      "template.sidebar.reset-password.title": "Happens to everyone",
+      "template.sidebar.reset-password.subtitle": "We'll help you back in",
+      "emailForgotTitle": "Reset your password",
+      "emailForgotTitleButton": "Send reset link",
+      "emailForgotSubtitle": "We will email you a link to reset password"
     }
     // cspell: enable
   }).build();
