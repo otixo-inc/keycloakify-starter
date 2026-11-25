@@ -119,7 +119,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     const {
         displayInfo = false,
         displayMessage = true,
-        displayRequiredFields = false,
+        //displayRequiredFields = false,
         headerNode,
         subheaderNode,
         socialProvidersNode = null,
@@ -235,19 +235,19 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                         </div>
                                     );
 
-                                    if (displayRequiredFields) {
-                                        return (
-                                            <div className={kcClsx("kcContentWrapperClass")}>
-                                                <div className={clsx(kcClsx("kcLabelWrapperClass"), "subtitle")}>
-                                                    <span className="subtitle">
-                                                        <span className="required">*</span>
-                                                        {msg("requiredFields")}
-                                                    </span>
-                                                </div>
-                                                <div className="col-md-10">{node}</div>
-                                            </div>
-                                        );
-                                    }
+                                    // if (displayRequiredFields) {
+                                    //     return (
+                                    //         <div className={kcClsx("kcContentWrapperClass")}>
+                                    //             <div className={clsx(kcClsx("kcLabelWrapperClass"), "subtitle")}>
+                                    //                 <span className="subtitle">
+                                    //                     <span className="required">*</span>
+                                    //                     {msg("requiredFields")}
+                                    //                 </span>
+                                    //             </div>
+                                    //             <div className="col-md-10">{node}</div>
+                                    //         </div>
+                                    //     );
+                                    // }
 
                                     return node;
                                 })()}
