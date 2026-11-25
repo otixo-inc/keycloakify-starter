@@ -121,6 +121,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
         displayMessage = true,
         displayRequiredFields = false,
         headerNode,
+        subheaderNode,
         socialProvidersNode = null,
         infoNode = null,
         documentTitle,
@@ -218,7 +219,10 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 )}
                                 {(() => {
                                     const node = !(auth !== undefined && auth.showUsername && !auth.showResetCredentials) ? (
-                                        <h1 id="kc-page-title">{headerNode}</h1>
+                                        <div className={styles.titleContainer}>
+                                            <span className={styles.titleContainerTitle}>{headerNode}</span>
+                                            {subheaderNode && <span className={styles.titleContainerSubTitle}>{subheaderNode}</span>}
+                                        </div>
                                     ) : (
                                         <div id="kc-username" className={kcClsx("kcFormGroupClass")}>
                                             <label id="kc-attempted-username">{auth.attemptedUsername}</label>
