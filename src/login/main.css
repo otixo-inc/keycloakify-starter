@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+#storybook-root {
+    height: 100%;
+}
+
 :root {
     --spark-of-light-dark-color: #00a7c4;
     --spark-of-light-dark-top: #00517e;
@@ -17,6 +21,7 @@ body {
         var(--spark-of-light-dark-bottom) 0,
         var(--spark-of-light-dark-top) 100%
     ) !important;
+    background: white !important;
     font-size: 16px;
     line-height: 20px;
 }
@@ -26,13 +31,14 @@ body {
 }
 
 a {
-    color: #00c5e7;
+    color: var(--color-actions-tertiary-text_default, #00404d);
+    text-decoration: underline;
 }
 
 /*
 We.Team Header
 */
-.kcLoginClass {
+/* .kcLoginClass {
     margin-top: 35px;
 }
 
@@ -51,11 +57,15 @@ We.Team Header
     background-size: 196px 72px;
     background-repeat: no-repeat;
     background-position: 30px 3px;
-}
+} */
 
 /*
 Page header
 */
+
+.kcHeaderClass {
+    display: none !important;
+}
 
 .kcHeaderClass {
     text-align: center !important;
@@ -150,36 +160,6 @@ Inputs
 
 .kcFormPasswordVisibilityButtonClass::after {
     border: none !important;
-}
-
-/*
-Form Card
-*/
-.kcFormCardClass {
-    position: relative;
-    border-top: none;
-    border-radius: 15px;
-    padding: 20px !important;
-}
-
-@media (min-width: 768px) {
-    .kcFormCardClass:after {
-        content: "";
-        position: absolute;
-        background: url(dots.svg) no-repeat;
-        right: -57px;
-        top: -57px;
-        height: 192px;
-        width: 170px;
-        z-index: -1;
-    }
-}
-
-@media (max-width: 767px) {
-    .kcFormCardClass {
-        margin-left: 10px !important;
-        margin-right: 10px !important;
-    }
 }
 
 /*

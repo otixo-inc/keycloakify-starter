@@ -46,7 +46,9 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       },
       "recovery-codes-copied-complete": "Recovery codes copied to clipboard",
       "updatePasswordTitle": "Please create a password",
-      "loginProfileTitle": "Please enter your name"
+      "loginProfileTitle": "Please enter your name",
+      "template.sidebar.verify.title": "You’re one step closer",
+      "template.sidebar.verify.subtitle": "We’ve sent a verification code to your email"
     },
     // cspell: disable
     de: {
@@ -90,7 +92,9 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       },
       "recovery-codes-copied-complete": "Wiederherstellungscodes in die Zwischenablage kopiert",
       "updatePasswordTitle": "Bitte erstelle ein Passwort",
-      "loginProfileTitle": "Bitte gib deinen Namen ein"
+      "loginProfileTitle": "Bitte gib deinen Namen ein",
+      "template.sidebar.verify.title": "You’re one step closer",
+      "template.sidebar.verify.subtitle": "We’ve sent a verification code to your email"
     }
     // cspell: enable
   }).build();
