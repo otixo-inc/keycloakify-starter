@@ -22,23 +22,8 @@ export default function LoginVerifyEmailCode(props: PageProps<Extract<KcContext,
     const { user, url, messagesPerField, isAppInitiatedAction } = kcContext;
 
     return (
-        <Template
-            kcContext={kcContext}
-            i18n={i18n}
-            doUseDefaultCss={doUseDefaultCss}
-            classes={classes}
-            displayInfo={true}
-            infoNode={
-                <p className="instruction">
-                    {msg("emailVerifyInstruction2")}
-                    <a href="">{msg("doClickHere")}</a>
-                    <br />
-                    {msg("emailVerifyInstruction3")}
-                </p>
-            }
-            headerNode={msg("emailVerifyTitle")}
-        >
-            <p className="instruction">{msg("emailVerifyInstruction1", user.email)}</p>
+        <Template kcContext={kcContext} i18n={i18n} doUseDefaultCss={doUseDefaultCss} classes={classes} headerNode={msg("emailVerifyTitle")}>
+            <p className="instruction text-secondary">{msg("emailVerifyInstruction1", user.email)}</p>
             <form ref={formRef} id="kc-verify-email-code-form" className={kcClsx("kcFormClass")} action={url.loginAction} method="post">
                 <div className={kcClsx("kcFormGroupClass", messagesPerField.printIfExists("email_code", "kcFormGroupErrorClass"))}>
                     <div className={kcClsx("kcLabelWrapperClass")}>
@@ -48,6 +33,7 @@ export default function LoginVerifyEmailCode(props: PageProps<Extract<KcContext,
                     </div>
                     <div className={kcClsx("kcInputWrapperClass")}>
                         <PinField
+                            placeholder="-"
                             autoFocus
                             length={6}
                             name="email_code"
@@ -62,7 +48,7 @@ export default function LoginVerifyEmailCode(props: PageProps<Extract<KcContext,
                 {isAppInitiatedAction && (
                     <div className={kcClsx("kcFormGroupClass")}>
                         <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                            <div className="verifyButtons">
+                            <div className="">
                                 <button className={kcClsx("kcButtonClass", "kcButtonDefaultClass")} type="submit" name="cancel-aia" value="true">
                                     {msgStr("doCancel")}
                                 </button>
@@ -71,6 +57,12 @@ export default function LoginVerifyEmailCode(props: PageProps<Extract<KcContext,
                     </div>
                 )}
             </form>
+            <p className="instruction text-secondary">
+                {msg("emailVerifyInstruction2")}&nbsp;
+                <a href="">{msg("doClickHere")}</a>
+                <br />
+                {msg("emailVerifyInstruction3")}
+            </p>
         </Template>
     );
 }
