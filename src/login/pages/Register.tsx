@@ -129,7 +129,6 @@ export default function Register(props: RegisterProps) {
                         onIsFormSubmittableValueChange={setIsFormSubmittable}
                         doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                     />
-                    {msg("registrationTermsText")}
                     {termsAcceptanceRequired && (
                         <TermsAcceptance
                             i18n={i18n}
@@ -176,17 +175,18 @@ export default function Register(props: RegisterProps) {
                                 />
                             </div>
                         )}
-                        {!invitationTokenFinal && (
-                            <div id="kc-form-options" className={`${kcClsx("kcFormOptionsClass")} backToLogin`}>
-                                <div className={kcClsx("kcFormOptionsWrapperClass")}>
-                                    <span>
-                                        {msg("alreadyHaveAnAccount")}&nbsp;<a href={url.loginUrl}>{msg("register.backToLogin")}</a>
-                                    </span>
-                                </div>
-                            </div>
-                        )}
                     </div>
                 </form>
+                {!invitationTokenFinal && (
+                    <div id="kc-form-options" className={`${clsx("kcFormOptionsClass")} backToLogin`}>
+                        <div className={kcClsx("kcFormOptionsWrapperClass")}>
+                            <span>
+                                {msg("alreadyHaveAnAccount")}&nbsp;<a href={url.loginUrl}>{msg("register.backToLogin")}</a>
+                            </span>
+                        </div>
+                    </div>
+                )}
+                <div className="pt-5">{msg("registrationTermsText")}</div>
             </div>
         </Template>
     );
