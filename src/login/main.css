@@ -120,10 +120,20 @@ Buttons
 
 .kcButtonClass {
     border-radius: 50px;
+    padding: 0.5625rem var(--spacing-spacing-16, 1rem) !important;
 }
 
+.kcButtonPrimaryClass {
+    background: var(--color-actions-primary-bg_default, #008831) !important;
+}
+
+.kcButtonPrimaryClass:hover {
+    background: var(--color-actions-primary-bg_hover, #00ae31) !important;
+}
+
+.kcButtonPrimaryClass:focus,
 .kcButtonPrimaryClass:active {
-    background-color: #007b23;
+    background: var(--color-actions-primary-bg_pressed, #00701f) !important;
 }
 
 /*

@@ -2,8 +2,13 @@
 Buttons
 */
 .kcButtonLargeClass {
-    font-weight: bold;
-    font-size: 22px !important;
-    height: 60px;
+    /* font-weight: bold; */
+    /* font-size: 22px !important; */
+    padding: 0.5625rem var(--spacing-spacing-16, 1rem) !important;
+
+    /* height: 60px; */
     min-width: 100px;
+
+    border-radius: var(--radius-xxl, 1.5rem) !important;
+    /* background: var(--color-actions-primary-bg_default, #008831) !important; */
 }
