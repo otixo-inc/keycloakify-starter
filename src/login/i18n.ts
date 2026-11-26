@@ -80,7 +80,9 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "template.sidebar.webauthn-authenticate.title": "Unlock with your device",
       "template.sidebar.webauthn-authenticate.subtitle": "Touch ID, Face ID or your screen lock. Nothing to type",
       "webauthn-login-title": "Confirm it’s you",
-      "webauthn-login-subtitle": "Your device will ask for Touch ID or your screen lock"
+      "webauthn-login-subtitle": "Your device will ask for Touch ID or your screen lock",
+      "template.sidebar.steps.verify": "Verify",
+      "template.sidebar.steps.name": "Name"
     },
     // cspell: disable
     de: {
@@ -158,7 +160,9 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "template.sidebar.webauthn-authenticate.title": "Unlock with your device",
       "template.sidebar.webauthn-authenticate.subtitle": "Touch ID, Face ID or your screen lock. Nothing to type",
       "webauthn-login-title": "Confirm it’s you",
-      "webauthn-login-subtitle": "Your device will ask for Touch ID or your screen lock"
+      "webauthn-login-subtitle": "Your device will ask for Touch ID or your screen lock",
+      "template.sidebar.steps.verify": "Verify",
+      "template.sidebar.steps.name": "Name"
     }
     // cspell: enable
   }).build();

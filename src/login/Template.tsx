@@ -32,6 +32,30 @@ function Steps(props: StepsProps) {
     );
 }
 
+export type StepsContainerProps = {
+    i18n: I18n;
+    kcContext: KcContext;
+};
+
+function StepsContainer(props: StepsContainerProps) {
+    switch (props.kcContext.pageId) {
+        case "login-verify-email-code.ftl":
+            return (
+                <Steps step={1} steps={4}>
+                    {props.i18n.msg("template.sidebar.steps.verify")}
+                </Steps>
+            );
+        case "login-update-profile.ftl":
+            return (
+                <Steps step={2} steps={4}>
+                    {props.i18n.msg("template.sidebar.steps.name")}
+                </Steps>
+            );
+    }
+
+    return null;
+}
+
 export type SidebarContentLayoutProps = {
     title: ReactNode;
     subtitle: ReactNode;
@@ -119,27 +143,7 @@ function Sidebar(props: SidebarProps) {
         return null;
     };
 
-    const renderBottom = () => {
-        switch (props.kcContext.pageId) {
-            case "login-verify-email-code.ftl":
-                return (
-                    <Steps step={1} steps={4}>
-                        Verify
-                    </Steps>
-                );
-            case "login-update-profile.ftl":
-                return (
-                    <Steps step={2} steps={4}>
-                        Name
-                    </Steps>
-                );
-        }
-
-        return null;
-    };
-
     const middle = renderMiddle();
-    const bottom = renderBottom();
 
     return (
         <div className={clsx(styles.left, middle ? undefined : styles.leftBackgroundImage)}>
@@ -151,7 +155,9 @@ function Sidebar(props: SidebarProps) {
                 <div className={styles.tagline}>One Team. One Goal. One Tool</div>
             </div>
             <div className={styles.middle}>{middle}</div>
-            <div>{bottom}</div>
+            <div>
+                <StepsContainer kcContext={props.kcContext} i18n={props.i18n} />
+            </div>
         </div>
     );
 }
@@ -208,6 +214,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     <div className={styles.logo} />
                     <div className={styles.logoText}>We.Team</div>
                 </div>
+                <StepsContainer kcContext={props.kcContext} i18n={props.i18n} />
             </div>
             <div className={styles.right}>
                 <div className={styles.rightContent}>
