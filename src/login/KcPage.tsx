@@ -22,6 +22,7 @@ const UserProfileFormFields = lazy(() => import("./UserProfileFormFields"));
 const LoginUpdateProfile = lazy(() => import("./pages/LoginUpdateProfile"));
 const LoginResetPassword = lazy(() => import("./pages/LoginResetPassword"));
 const LoginUpdatePassword = lazy(() => import("./pages/LoginUpdatePassword"));
+const SelectAuthenticator = lazy(() => import("./pages/SelectAuthenticator"));
 
 const doMakeUserConfirmPassword = true;
 
@@ -133,7 +134,14 @@ export default function KcPage(props: { kcContext: KcContext }) {
                                 doUseDefaultCss={true}
                             />
                         );
-
+                    case "select-authenticator.ftl":
+                        return (
+                            <SelectAuthenticator
+                                {...{ kcContext, i18n, classes }}
+                                Template={Template}
+                                doUseDefaultCss={true}
+                            />
+                        );
                     default:
                         return (
                             <DefaultPage
@@ -201,6 +209,9 @@ function useCustomCss(kcContext: KcContext) {
                 break;
             case "webauthn-authenticate.ftl":
                 import("./webauthn-authenticate.css");
+                break;
+            case "select-authenticator.ftl":
+                import("./select-authenticator.css");
                 break;
             case "webauthn-register.ftl":
                 import("./webauthn-register.css");
