@@ -75,7 +75,11 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "loginOtpTitle":"Enter the code from your app",
       "loginOtpSubtitle":"6 digits, they change every 30 seconds",
       "restartLoginTooltip": "Not you?",
-      "doTryAnotherWay": "Use another method"
+      "doTryAnotherWay": "Use another method",
+      "template.sidebar.webauthn-authenticate.title": "Unlock with your device",
+      "template.sidebar.webauthn-authenticate.subtitle": "Touch ID, Face ID or your screen lock. Nothing to type",
+      "webauthn-login-title": "Confirm it’s you",
+      "webauthn-login-subtitle": "Your device will ask for Touch ID or your screen lock"
     },
     // cspell: disable
     de: {
@@ -148,7 +152,11 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "loginOtpTitle":"Enter the code from your app",
       "loginOtpSubtitle":"6 digits, they change every 30 seconds",
       "restartLoginTooltip": "Not you?",
-      "doTryAnotherWay": "Use another method"
+      "doTryAnotherWay": "Use another method",
+      "template.sidebar.webauthn-authenticate.title": "Unlock with your device",
+      "template.sidebar.webauthn-authenticate.subtitle": "Touch ID, Face ID or your screen lock. Nothing to type",
+      "webauthn-login-title": "Confirm it’s you",
+      "webauthn-login-subtitle": "Your device will ask for Touch ID or your screen lock"
     }
     // cspell: enable
   }).build();

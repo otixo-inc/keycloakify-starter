@@ -107,6 +107,14 @@ function Sidebar(props: SidebarProps) {
                         image={<img src={LockImage} />}
                     />
                 );
+            case "webauthn-authenticate.ftl":
+                return (
+                    <SidebarContentLayout
+                        title={props.i18n.msg("template.sidebar.webauthn-authenticate.title")}
+                        subtitle={props.i18n.msg("template.sidebar.webauthn-authenticate.subtitle")}
+                        image={<img src={LockImage} />}
+                    />
+                );
         }
         return null;
     };
