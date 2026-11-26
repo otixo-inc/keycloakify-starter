@@ -141,6 +141,10 @@ Buttons
     background: var(--color-actions-primary-bg_pressed, #00701f) !important;
 }
 
+.kcButtonDefaultClass {
+    background-image: none;
+}
+
 /*
 Language picker
 */
