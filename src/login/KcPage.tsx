@@ -24,6 +24,7 @@ const LoginResetPassword = lazy(() => import("./pages/LoginResetPassword"));
 const LoginUpdatePassword = lazy(() => import("./pages/LoginUpdatePassword"));
 const SelectAuthenticator = lazy(() => import("./pages/SelectAuthenticator"));
 const LoginOtp = lazy(() => import("./pages/LoginOtp"));
+const WebauthnAuthenticate = lazy(() => import("./pages/WebauthnAuthenticate"));
 
 const doMakeUserConfirmPassword = true;
 
@@ -146,6 +147,14 @@ export default function KcPage(props: { kcContext: KcContext }) {
                     case "login-otp.ftl":
                         return (
                             <LoginOtp
+                                {...{ kcContext, i18n, classes }}
+                                Template={Template}
+                                doUseDefaultCss={true}
+                            />
+                        );
+                    case "webauthn-authenticate.ftl":
+                        return (
+                            <WebauthnAuthenticate
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
                                 doUseDefaultCss={true}
