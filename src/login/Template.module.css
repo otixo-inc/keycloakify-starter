@@ -204,3 +204,19 @@
     font-weight: 400;
     line-height: 1.375rem; /* 137.5% */
 }
+
+.usernameContainer {
+    padding-bottom: 20px !important;
+    margin-bottom: 20px !important;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+
+    border-bottom: 1px solid var(--color-stroke-primary, #dadada);
+}
+
+.attemptedUsername {
+    margin-bottom: 0 !important;
+}

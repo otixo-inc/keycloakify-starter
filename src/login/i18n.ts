@@ -73,8 +73,8 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "template.sidebar.login-otp.title": "Open your authenticator",
       "template.sidebar.login-otp.subtitle": "The code changes every 30 seconds",
       "loginOtpTitle":"Enter the code from your app",
-      "loginOtpSubtitle":"6 digits, they change every 30 seconds"
-      
+      "loginOtpSubtitle":"6 digits, they change every 30 seconds",
+      "restartLoginTooltip": "Not you?",
     },
     // cspell: disable
     de: {
@@ -145,7 +145,8 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "template.sidebar.login-otp.title": "Open your authenticator",
       "template.sidebar.login-otp.subtitle": "The code changes every 30 seconds",
       "loginOtpTitle":"Enter the code from your app",
-      "loginOtpSubtitle":"6 digits, they change every 30 seconds"
+      "loginOtpSubtitle":"6 digits, they change every 30 seconds",
+      "restartLoginTooltip": "Not you?",
     }
     // cspell: enable
   }).build();
