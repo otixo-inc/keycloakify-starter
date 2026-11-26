@@ -21,6 +21,10 @@ export const WithDifferentAuthenticationMethods: Story = {
         <KcPageStory
             kcContext={{
                 auth: {
+                    showUsername: true,
+                    showResetCredentials: false,
+                    showTryAnotherWayLink: true,
+                    attemptedUsername: "user@place.com",
                     authenticationSelections: [
                         {
                             authExecId: "25697c4e-0c80-4f2c-8eb7-2c16347e8e8d",
