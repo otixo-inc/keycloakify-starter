@@ -99,6 +99,14 @@ function Sidebar(props: SidebarProps) {
                         image={<img src={LockImage} />}
                     />
                 );
+            case "login-otp.ftl":
+                return (
+                    <SidebarContentLayout
+                        title={props.i18n.msg("template.sidebar.login-otp.title")}
+                        subtitle={props.i18n.msg("template.sidebar.login-otp.subtitle")}
+                        image={<img src={LockImage} />}
+                    />
+                );
         }
         return null;
     };
