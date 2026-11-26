@@ -252,18 +252,14 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 )}
                                 {(() => {
                                     const node = !(auth !== undefined && auth.showUsername && !auth.showResetCredentials) ? (
-                                        <div className={styles.titleContainer}>
-                                            <span className={styles.titleContainerTitle}>{headerNode}</span>
-                                            {subheaderNode && <span className={styles.titleContainerSubTitle}>{subheaderNode}</span>}
-                                        </div>
+                                        <></>
                                     ) : (
-                                        <div id="kc-username" className={kcClsx("kcFormGroupClass")}>
-                                            <label id="kc-attempted-username">{auth.attemptedUsername}</label>
+                                        <div id="kc-username" className={clsx(kcClsx("kcFormGroupClass"), styles.usernameContainer)}>
+                                            <label id="kc-attempted-username" className={styles.attemptedUsername}>
+                                                {auth.attemptedUsername}
+                                            </label>
                                             <a id="reset-login" href={url.loginRestartFlowUrl} aria-label={msgStr("restartLoginTooltip")}>
-                                                <div className="kc-login-tooltip">
-                                                    <i className={kcClsx("kcResetFlowIcon")}></i>
-                                                    <span className="kc-tooltip-text">{msg("restartLoginTooltip")}</span>
-                                                </div>
+                                                {msg("restartLoginTooltip")}
                                             </a>
                                         </div>
                                     );
@@ -284,6 +280,12 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
                                     return node;
                                 })()}
+                                {headerNode && (
+                                    <div className={styles.titleContainer}>
+                                        <span className={styles.titleContainerTitle}>{headerNode}</span>
+                                        {subheaderNode && <span className={styles.titleContainerSubTitle}>{subheaderNode}</span>}
+                                    </div>
+                                )}
                             </header>
                             <div id="kc-content">
                                 <div id="kc-content-wrapper">
