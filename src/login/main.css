@@ -12,10 +12,14 @@
     --pf-global--primary-color--200: #00952a;
     --pf-global--primary-color--300: #007b23;
     --weteam-sky-blue: #00c5e7;
+
+    --font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif !important;
+
+    --pf-global--FontFamily--heading--sans-serif: var(--font-family) !important;
 }
 
 body {
-    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: var(--font-family);
     background: radial-gradient(
         circle,
         var(--spark-of-light-dark-bottom) 0,
@@ -279,26 +283,6 @@ Social logins
     margin-top: 5px;
 }
 
-.kcSelectAuthListItemArrowIconClass {
-    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
-}
-
-.kcSelectAuthListItemArrowIconClass::before {
-    content: "";
-}
-.kcSelectAuthListItemIconClass {
-    display: none;
-}
-.kcSelectAuthListItemDescriptionClass span:first-child {
-    margin-right: 2px;
-}
-.kcSelectAuthListItemHeadingClass,
-.kcSelectAuthListItemDescriptionClass {
-    margin-bottom: 5px !important;
-}
-.kcSelectAuthListItemClass {
-    padding-left: 10px !important;
-}
 #kc-select-try-another-way-form {
     margin-top: 20px !important;
 }

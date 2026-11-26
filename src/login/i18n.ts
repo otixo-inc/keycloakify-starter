@@ -64,7 +64,12 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "template.sidebar.update-password.subtitle": "Create a strong password to protect your data",
       "emailForgotTitle": "Reset your password",
       "emailForgotTitleButton": "Send reset link",
-      "emailForgotSubtitle": "We will email you a link to reset password"
+      "emailForgotSubtitle": "We will email you a link to reset password",
+      "loginChooseAuthenticator":"How do you want to confirm?",
+      "loginChooseAuthenticatorSubtitle":"Pick whichever you have on you right now",
+      "loginChooseAuthenticator.selectFromSignedIn":"Select from signed in",
+      "template.sidebar.select-authenticator.title": "More than one way in",
+      "template.sidebar.select-authenticator.subtitle": "Whatever you have on you right now",
     },
     // cspell: disable
     de: {
@@ -126,7 +131,12 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "template.sidebar.update-password.subtitle": "Create a strong password to protect your data",
       "emailForgotTitle": "Reset your password",
       "emailForgotTitleButton": "Send reset link",
-      "emailForgotSubtitle": "We will email you a link to reset password"
+      "emailForgotSubtitle": "We will email you a link to reset password",
+      "loginChooseAuthenticator":"How do you want to confirm?",
+      "loginChooseAuthenticatorSubtitle":"Pick whichever you have on you right now",
+      "loginChooseAuthenticator.selectFromSignedIn":"Select from signed in",
+      "template.sidebar.select-authenticator.title": "More than one way in",
+      "template.sidebar.select-authenticator.subtitle": "Whatever you have on you right now",
     }
     // cspell: enable
   }).build();

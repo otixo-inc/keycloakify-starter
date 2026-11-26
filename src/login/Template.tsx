@@ -91,6 +91,14 @@ function Sidebar(props: SidebarProps) {
                         image={<img src={LockImage} />}
                     />
                 );
+            case "select-authenticator.ftl":
+                return (
+                    <SidebarContentLayout
+                        title={props.i18n.msg("template.sidebar.select-authenticator.title")}
+                        subtitle={props.i18n.msg("template.sidebar.select-authenticator.subtitle")}
+                        image={<img src={LockImage} />}
+                    />
+                );
         }
         return null;
     };

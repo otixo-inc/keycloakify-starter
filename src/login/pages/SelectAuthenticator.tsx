@@ -18,7 +18,9 @@ export default function SelectAuthenticator(props: PageProps<Extract<KcContext, 
             classes={classes}
             displayInfo={false}
             headerNode={msg("loginChooseAuthenticator")}
+            subheaderNode={msg("loginChooseAuthenticatorSubtitle")}
         >
+            <p>{msg("loginChooseAuthenticator.selectFromSignedIn")}</p>
             <form id="kc-select-credential-form" className={kcClsx("kcFormClass")} action={url.loginAction} method="post">
                 <div className={kcClsx("kcSelectAuthListClass")}>
                     {auth.authenticationSelections.map((authenticationSelection, i) => (
