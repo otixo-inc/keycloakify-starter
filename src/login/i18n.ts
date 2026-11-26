@@ -70,6 +70,11 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "loginChooseAuthenticator.selectFromSignedIn":"Select from signed in",
       "template.sidebar.select-authenticator.title": "More than one way in",
       "template.sidebar.select-authenticator.subtitle": "Whatever you have on you right now",
+      "template.sidebar.login-otp.title": "Open your authenticator",
+      "template.sidebar.login-otp.subtitle": "The code changes every 30 seconds",
+      "loginOtpTitle":"Enter the code from your app",
+      "loginOtpSubtitle":"6 digits, they change every 30 seconds"
+      
     },
     // cspell: disable
     de: {
@@ -137,6 +142,10 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "loginChooseAuthenticator.selectFromSignedIn":"Select from signed in",
       "template.sidebar.select-authenticator.title": "More than one way in",
       "template.sidebar.select-authenticator.subtitle": "Whatever you have on you right now",
+      "template.sidebar.login-otp.title": "Open your authenticator",
+      "template.sidebar.login-otp.subtitle": "The code changes every 30 seconds",
+      "loginOtpTitle":"Enter the code from your app",
+      "loginOtpSubtitle":"6 digits, they change every 30 seconds"
     }
     // cspell: enable
   }).build();

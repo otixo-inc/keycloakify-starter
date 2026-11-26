@@ -1,15 +1,17 @@
-#kc-otp-login-form .kcFormGroupClass:first-child input[type="radio"] {
-    display: none !important;
-}
-
-#kc-otp-login-form .kcFormGroupClass:first-child label {
-    margin-bottom: 10px;
+#kc-otp-login-form .kcLoginOTPListClass {
     margin-right: 10px;
+    margin-left: 10px;
 }
 
-#kc-otp-login-form .kcInputWrapperClass {
-    display: flex; 
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+#kc-otp-login-form .kcLoginOTPListClass::before {
+    border-radius: var(--radius-xl, 0.75rem) !important;
+    border: 1px solid var(--color-stroke-primary, #dadada) !important;
+}
+
+#kc-otp-login-form .kcLoginOTPListClass:hover::before {
+    border: 1px solid var(--pf-global--primary-color--100) !important;
+}
+
+#kc-otp-login-form .kcLoginOTPListClass::after {
+    display: none;
 }

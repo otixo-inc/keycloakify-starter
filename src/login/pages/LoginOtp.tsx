@@ -26,7 +26,8 @@ export default function LoginOtp(props: PageProps<Extract<KcContext, { pageId: "
             doUseDefaultCss={doUseDefaultCss}
             classes={classes}
             displayMessage={!messagesPerField.existsError("totp")}
-            headerNode={msg("doLogIn")}
+            headerNode={msg("loginOtpTitle")}
+            subheaderNode={msg("loginOtpSubtitle")}
         >
             <form
                 id="kc-otp-login-form"
@@ -59,6 +60,8 @@ export default function LoginOtp(props: PageProps<Extract<KcContext, { pageId: "
                                             <span className={kcClsx("kcLoginOTPListItemTitleClass")}>{otpCredential.userLabel}</span>
                                         </span>
                                     </label>
+                                    <br />
+                                    <br />
                                 </Fragment>
                             ))}
                         </div>
