@@ -23,6 +23,7 @@ const LoginUpdateProfile = lazy(() => import("./pages/LoginUpdateProfile"));
 const LoginResetPassword = lazy(() => import("./pages/LoginResetPassword"));
 const LoginUpdatePassword = lazy(() => import("./pages/LoginUpdatePassword"));
 const SelectAuthenticator = lazy(() => import("./pages/SelectAuthenticator"));
+const LoginOtp = lazy(() => import("./pages/LoginOtp"));
 
 const doMakeUserConfirmPassword = true;
 
@@ -137,6 +138,14 @@ export default function KcPage(props: { kcContext: KcContext }) {
                     case "select-authenticator.ftl":
                         return (
                             <SelectAuthenticator
+                                {...{ kcContext, i18n, classes }}
+                                Template={Template}
+                                doUseDefaultCss={true}
+                            />
+                        );
+                    case "login-otp.ftl":
+                        return (
+                            <LoginOtp
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
                                 doUseDefaultCss={true}
