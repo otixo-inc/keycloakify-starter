@@ -8,6 +8,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
     en: {
       registerTitle: "Create an account",
       registerSubtitle: "Get started with your work email",
+      registerSubtitleInvitation: "{0} invited you to join as a Member",
       loginAccountTitle: "Welcome back to We.Team",
       loginAccountSubtitle: "Please enter your details to sign in",
       loginAccountRegister: "Create an account",
@@ -29,7 +30,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       doCancel: "Cancel",
       VerifyEmailInvalidCode: "Failed to verify the code. Please try again.",
       registerInvitation: "After finalizing your registration, you’ll automatically join {0}’s TeamSpace \"{1}\".",
-      registerInvitationTitle: "Join \"{0}\"",
+      registerInvitationTitle: "{0}",
       completeYourRegistration: "Complete Your Registration",
       haveaWeteamAccount: "I have a We.Team Account",
       "newsletter.yes": "Send me product updates and tips",
@@ -85,6 +86,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
     de: {
       registerTitle: "Create an account",
       registerSubtitle: "Get started with your work email",
+      registerSubtitleInvitation: "{0} invited you to join as a Member",
       loginAccountTitle: "Welcome back to We.Team",
       loginAccountSubtitle: "Please enter your details to sign in",
       loginAccountRegister: "Create an account",

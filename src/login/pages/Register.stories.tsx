@@ -49,7 +49,7 @@ const weTeamContext = {
                 },
                 required: false,
                 readOnly: false
-            } satisfies Attribute,
+            } satisfies Attribute
         }
     }
 };
@@ -67,8 +67,8 @@ export const WeTeamWithInvitationToken: Story = {
             kcContext={{
                 ...weTeamContext,
                 invitationToken: "hello",
-                invitationWorkspaceName: "hello",
-                ownerName: "hello"
+                invitationWorkspaceName: "ByteCraft Software Inc.",
+                ownerName: "Lena Markovic"
             }}
         />
     )
