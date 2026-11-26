@@ -26,6 +26,12 @@ export const MultipleOtpCredentials: Story = {
     render: () => (
         <KcPageStory
             kcContext={{
+                auth: {
+                    showUsername: true,
+                    showResetCredentials: false,
+                    showTryAnotherWayLink: true,
+                    attemptedUsername: "user@place.com"
+                },
                 otpLogin: {
                     userOtpCredentials: [
                         { id: "credential1", userLabel: "Device 1" },
