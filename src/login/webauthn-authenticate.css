@@ -1,3 +1,56 @@
 .kcSignUpClass {
-  display: none !important;
+    display: none !important;
+}
+
+.kcSelectAuthListItemClass {
+    padding: var(--spacing-spacing-08, 0.5rem) var(--spacing-spacing-16, 1rem) !important;
+
+    border-radius: var(--radius-xl, 0.75rem);
+    border: 1px solid var(--color-stroke-primary, #dadada);
+
+    margin-bottom: 8px !important;
+}
+
+.kcSelectAuthListItemIconClass {
+    display: none;
+}
+
+/* hide arrow */
+.kcSelectAuthListItemArrowIconClass::before {
+    content: "";
+}
+
+.kcSelectAuthListItemArrowIconClass {
+    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+/* hide default icon */
+.kcSelectAuthListItemIconPropertyClass {
+    display: none;
+}
+
+.kcSelectAuthListItemHeadingClass,
+.kcSelectAuthListItemDescriptionClass {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+}
+
+.kcSelectAuthListItemHeadingClass {
+    color: var(--color-text-primary, #1c1c1c);
+}
+
+.kcSelectAuthListItemDescriptionClass {
+    color: var(--color-text-secondary, #666);
+
+    font-size: 0.9375rem;
+    line-height: 1.25rem; /* 133.333% */
+}
+
+.kcSelectAuthListItemDescriptionClass span:first-child {
+    margin-right: 2px;
+}
+
+.kcSelectAuthListItemTitle {
+    text-align: left;
+    padding-left: 20px;
 }
