@@ -75,6 +75,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "loginOtpTitle":"Enter the code from your app",
       "loginOtpSubtitle":"6 digits, they change every 30 seconds",
       "restartLoginTooltip": "Not you?",
+      "doTryAnotherWay": "Use another method"
     },
     // cspell: disable
     de: {
@@ -147,6 +148,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>()
       "loginOtpTitle":"Enter the code from your app",
       "loginOtpSubtitle":"6 digits, they change every 30 seconds",
       "restartLoginTooltip": "Not you?",
+      "doTryAnotherWay": "Use another method"
     }
     // cspell: enable
   }).build();
