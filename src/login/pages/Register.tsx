@@ -77,118 +77,105 @@ export default function Register(props: RegisterProps) {
                 messageHeader !== undefined ? (
                     advancedMsg(messageHeader)
                 ) : invitationTokenFinal ? (
-                    <strong>{msg("registerInvitationTitle", invitationWorkspaceNameFinal)} </strong>
+                    <strong>{invitationWorkspaceNameFinal}</strong>
                 ) : (
                     msg("registerTitle")
                 )
             }
-            subheaderNode={invitationTokenFinal ? undefined : msg("registerSubtitle")}
+            subheaderNode={invitationTokenFinal ? msg("registerSubtitleInvitation", ownerNameFinal) : msg("registerSubtitle")}
             displayMessage={messagesPerField.exists("global")}
             displayRequiredFields={false}
         >
-            {invitationTokenFinal && (
-                <div className="ui menu">
-                    <div className="active item">{msg("completeYourRegistration")}</div>
-                    <div className="item">
-                        <a href={url.loginUrl}>{msg("haveaWeteamAccount")}</a>
-                    </div>
-                </div>
-            )}
-            <div className={invitationTokenFinal ? "ui tab" : ""}>
-                {invitationTokenFinal && <div className="message">{msg("registerInvitation", ownerNameFinal, invitationWorkspaceNameFinal)}</div>}
+            {/* {invitationTokenFinal && <div className="message">{msg("registerInvitation", ownerNameFinal, invitationWorkspaceNameFinal)}</div>} */}
 
-                <form id="kc-register-form" className={kcClsx("kcFormClass")} action={url.registrationAction} method="post">
-                    <UserProfileFormFields
-                        kcContext={kcContext}
+            <form id="kc-register-form" className={kcClsx("kcFormClass")} action={url.registrationAction} method="post">
+                <UserProfileFormFields
+                    kcContext={kcContext}
+                    i18n={i18n}
+                    kcClsx={kcClsx}
+                    onIsFormSubmittableValueChange={setIsFormSubmittable}
+                    doMakeUserConfirmPassword={doMakeUserConfirmPassword}
+                />
+                {termsAcceptanceRequired && (
+                    <TermsAcceptance
                         i18n={i18n}
                         kcClsx={kcClsx}
-                        onIsFormSubmittableValueChange={setIsFormSubmittable}
-                        doMakeUserConfirmPassword={doMakeUserConfirmPassword}
+                        messagesPerField={messagesPerField}
+                        areTermsAccepted={areTermsAccepted}
+                        onAreTermsAcceptedValueChange={setAreTermsAccepted}
                     />
-                    {termsAcceptanceRequired && (
-                        <TermsAcceptance
-                            i18n={i18n}
-                            kcClsx={kcClsx}
-                            messagesPerField={messagesPerField}
-                            areTermsAccepted={areTermsAccepted}
-                            onAreTermsAcceptedValueChange={setAreTermsAccepted}
-                        />
-                    )}
-                    {recaptchaRequired && (recaptchaVisible || recaptchaAction === undefined) && (
-                        <div className="form-group">
-                            <div className={kcClsx("kcInputWrapperClass")}>
-                                <div className="g-recaptcha" data-size="compact" data-sitekey={recaptchaSiteKey} data-action={recaptchaAction}></div>
-                            </div>
+                )}
+                {recaptchaRequired && (recaptchaVisible || recaptchaAction === undefined) && (
+                    <div className="form-group">
+                        <div className={kcClsx("kcInputWrapperClass")}>
+                            <div className="g-recaptcha" data-size="compact" data-sitekey={recaptchaSiteKey} data-action={recaptchaAction}></div>
+                        </div>
+                    </div>
+                )}
+                <div className={kcClsx("kcFormGroupClass")}>
+                    {recaptchaRequired && !recaptchaVisible && recaptchaAction !== undefined ? (
+                        <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
+                            <button
+                                className={clsx(
+                                    kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonBlockClass", "kcButtonLargeClass"),
+                                    "g-recaptcha"
+                                )}
+                                data-sitekey={recaptchaSiteKey}
+                                data-callback={() => {
+                                    (document.getElementById("kc-register-form") as HTMLFormElement).submit();
+                                }}
+                                data-action={recaptchaAction}
+                                type="submit"
+                            >
+                                {msg("doRegister")}
+                            </button>
+                        </div>
+                    ) : (
+                        <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
+                            <input
+                                // because we have hidden required fields, isFormSubmittable will never be true
+                                //disabled={!isFormSubmittable || (termsAcceptanceRequired && !areTermsAccepted)}
+                                disabled={termsAcceptanceRequired && !areTermsAccepted}
+                                className={kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonBlockClass", "kcButtonLargeClass")}
+                                type="submit"
+                                value={msgStr("doRegister")}
+                            />
                         </div>
                     )}
-                    <div className={kcClsx("kcFormGroupClass")}>
-                        {recaptchaRequired && !recaptchaVisible && recaptchaAction !== undefined ? (
-                            <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                                <button
-                                    className={clsx(
-                                        kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonBlockClass", "kcButtonLargeClass"),
-                                        "g-recaptcha"
-                                    )}
-                                    data-sitekey={recaptchaSiteKey}
-                                    data-callback={() => {
-                                        (document.getElementById("kc-register-form") as HTMLFormElement).submit();
-                                    }}
-                                    data-action={recaptchaAction}
-                                    type="submit"
+                </div>
+            </form>
+            {!hideIdp && social?.providers !== undefined && social.providers.length !== 0 && (
+                <div id="kc-social-providers" className={kcClsx("kcFormSocialAccountSectionClass")}>
+                    <h2 className="kcOrDivider">{msg("identity-provider-divider-label")}</h2>
+                    <ul className={kcClsx("kcFormSocialAccountListClass", social.providers.length > 3 && "kcFormSocialAccountListGridClass")}>
+                        {social.providers.map((...[p, , providers]) => (
+                            <li key={p.alias}>
+                                <a
+                                    id={`social-${p.alias}`}
+                                    className={kcClsx("kcFormSocialAccountListButtonClass", providers.length > 3 && "kcFormSocialAccountGridItem")}
+                                    type="button"
+                                    href={p.loginUrl}
                                 >
-                                    {msg("doRegister")}
-                                </button>
-                            </div>
-                        ) : (
-                            <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                                <input
-                                    // because we have hidden required fields, isFormSubmittable will never be true
-                                    //disabled={!isFormSubmittable || (termsAcceptanceRequired && !areTermsAccepted)}
-                                    disabled={termsAcceptanceRequired && !areTermsAccepted}
-                                    className={kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonBlockClass", "kcButtonLargeClass")}
-                                    type="submit"
-                                    value={msgStr("doRegister")}
-                                />
-                            </div>
-                        )}
-                    </div>
-                </form>
-                {!hideIdp && social?.providers !== undefined && social.providers.length !== 0 && (
-                    <div id="kc-social-providers" className={kcClsx("kcFormSocialAccountSectionClass")}>
-                        <h2 className="kcOrDivider">{msg("identity-provider-divider-label")}</h2>
-                        <ul className={kcClsx("kcFormSocialAccountListClass", social.providers.length > 3 && "kcFormSocialAccountListGridClass")}>
-                            {social.providers.map((...[p, , providers]) => (
-                                <li key={p.alias}>
-                                    <a
-                                        id={`social-${p.alias}`}
-                                        className={kcClsx(
-                                            "kcFormSocialAccountListButtonClass",
-                                            providers.length > 3 && "kcFormSocialAccountGridItem"
-                                        )}
-                                        type="button"
-                                        href={p.loginUrl}
-                                    >
-                                        {p.iconClasses && <i className={clsx(kcClsx("kcCommonLogoIdP"), p.iconClasses)} aria-hidden="true"></i>}
-                                        <span className={clsx(kcClsx("kcFormSocialAccountNameClass"), p.iconClasses && "kc-social-icon-text")}>
-                                            {msg("providerSignUp", kcSanitize(p.displayName))}
-                                        </span>
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                )}
-                {!invitationTokenFinal && (
-                    <div id="kc-form-options" className={`${clsx("kcFormOptionsClass")} backToLogin pt-5`}>
-                        <div className={kcClsx("kcFormOptionsWrapperClass")}>
-                            <span>
-                                {msg("alreadyHaveAnAccount")}&nbsp;<a href={url.loginUrl}>{msg("register.backToLogin")}</a>
-                            </span>
-                        </div>
-                    </div>
-                )}
-                <div className="pt-5">{msg("registrationTermsText")}</div>
+                                    {p.iconClasses && <i className={clsx(kcClsx("kcCommonLogoIdP"), p.iconClasses)} aria-hidden="true"></i>}
+                                    <span className={clsx(kcClsx("kcFormSocialAccountNameClass"), p.iconClasses && "kc-social-icon-text")}>
+                                        {msg("providerSignUp", kcSanitize(p.displayName))}
+                                    </span>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+
+            <div id="kc-form-options" className={`${clsx("kcFormOptionsClass")} backToLogin pt-5`}>
+                <div className={kcClsx("kcFormOptionsWrapperClass")}>
+                    <span>
+                        {msg("alreadyHaveAnAccount")}&nbsp;<a href={url.loginUrl}>{msg("register.backToLogin")}</a>
+                    </span>
+                </div>
             </div>
+
+            <div className="pt-5">{msg("registrationTermsText")}</div>
         </Template>
     );
 }
