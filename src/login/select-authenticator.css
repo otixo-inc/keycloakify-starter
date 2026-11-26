@@ -38,6 +38,15 @@
     background-image: url(./key.svg);
 }
 
+@media (prefers-color-scheme: dark) {
+    .kcSelectAuthListItemIconClass:has(> .kcAuthenticatorWebAuthnClass) {
+        background-image: url(./key-white.svg);
+    }
+    .kcSelectAuthListItemIconClass:has(> .kcAuthenticatorOTPClass) {
+        background-image: url(./shield-tick-white.svg);
+    }
+}
+
 /* hide default icon */
 .kcSelectAuthListItemIconPropertyClass {
     display: none;
