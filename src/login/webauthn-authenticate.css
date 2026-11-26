@@ -11,6 +11,14 @@
     margin-bottom: 8px !important;
 }
 
+.kcSelectAuthListItemHeadingClass {
+    color: var(--color-text-primary, #1c1c1c) !important;
+}
+
+.kcSelectAuthListItemDescriptionClass {
+    color: var(--color-text-secondary, #1c1c1c) !important;
+}
+
 .kcSelectAuthListItemIconClass {
     display: none;
 }

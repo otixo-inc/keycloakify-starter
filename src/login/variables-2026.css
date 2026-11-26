@@ -221,14 +221,12 @@
 
     --brand-gradient: linear-gradient(180deg, #086d8e 0%, #033f51 100%);
 
-    /* 
-    rgb of --color-surface-secondary
-  */
-    --emoji-picker-background: 245, 245, 245;
+    --pf-global--danger-color--200: var(--color-text-error);
+    --pf-global--Color--100: var(--color-text-primary, #1c1c1c);
 }
 
 @media (prefers-color-scheme: dark) {
-    :xroot {
+    :root {
         /* Collection name: semantic-tokens */
         /* Mode: Dark */
         --spacing-spacing-02: 2px;

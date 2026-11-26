@@ -28,6 +28,7 @@ body {
     background: white !important;
     font-size: 16px;
     line-height: 20px;
+    color: var(--color-text-primary, #1c1c1c);
 }
 
 .login-pf-page {
@@ -180,7 +181,8 @@ Inputs
 Sign up
 */
 .kcInfoAreaWrapperClass {
-    background-color: white !important;
+    color: var(--color-text-secondary) !important;
+    background: var(--color-surface-primary, #fff) !important;
     font-size: initial !important;
 }
 .kcSignUpClass {
@@ -193,6 +195,9 @@ Social logins
 .kcFormSocialAccountListButtonClass {
     padding: 0.5625rem var(--spacing-spacing-16, 1rem);
     text-decoration: none;
+    border-radius: 50px;
+    background: var(--color-surface-primary, #fff) !important;
+    color: var(--color-text-primary, #1c1c1c) !important;
 }
 .kcFormSocialAccountListButtonClass::after {
     border-radius: 50px !important;
@@ -286,4 +291,12 @@ Social logins
 #kc-select-try-another-way-form {
     margin-top: 20px !important;
     text-align: center;
+}
+
+.pf-c-input-group {
+    --pf-c-input-group--BackgroundColor: var(--color-surface-primary, #fff);
+}
+
+#kc-form-options .checkbox {
+    color: var(--color-text-secondary) !important;
 }

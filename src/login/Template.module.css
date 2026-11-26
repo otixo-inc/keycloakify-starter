@@ -10,7 +10,7 @@
     align-items: center;
     background: linear-gradient(180deg, #086d8e 0%, #033f51 100%);
 
-    color: var(--color-text-white-interactive, #fff);
+    color: #fff;
 }
 
 .left {
@@ -28,7 +28,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    color: var(--color-text-white-interactive, #fff);
+    color: #fff;
 }
 
 .leftBackgroundImage {
@@ -103,6 +103,7 @@
     justify-content: center;
     align-items: center;
     gap: var(--spacing-spacing-12, 0.75rem);
+    color: #fff;
 }
 
 .logoText {
@@ -132,7 +133,6 @@
 }
 
 .stepxofx {
-    color: var(--color-text-white-interactive, #fff);
     font-size: 0.75rem;
     line-height: 1rem; /* 133.333% */
     text-transform: uppercase;
@@ -140,7 +140,6 @@
 }
 
 .stepName {
-    color: var(--color-text-white-interactive, #fff);
     font-weight: 600;
 }
 
@@ -153,7 +152,6 @@
 }
 
 .sidebarContentLayoutTitle {
-    color: var(--color-text-white-interactive, #fff);
     text-align: center;
 
     font-size: 1.375rem;
@@ -162,7 +160,6 @@
 }
 
 .sidebarContentLayoutSubtitle {
-    color: var(--color-text-white-interactive, #fff);
     text-align: center;
 
     font-size: 0.9375rem;

@@ -1,6 +1,12 @@
 #kc-otp-login-form .kcLoginOTPListClass {
     margin-right: 10px;
     margin-left: 10px;
+    background: var(--color-surface-primary, #fff) !important;
+}
+
+#kc-otp-login-form .kcLoginOTPListItemTitleClass,
+#kc-otp-login-form .kcLoginOTPListItemIconBodyClass {
+    color: var(--color-text-primary, #1c1c1c) !important;
 }
 
 #kc-otp-login-form .kcLoginOTPListClass::before {
@@ -9,7 +15,7 @@
 }
 
 #kc-otp-login-form .kcLoginOTPListClass:hover::before {
-    border: 1px solid var(--pf-global--primary-color--100) !important;
+    border: 1px solid var(--color-stroke-hover, #9e9e9e) !important;
 }
 
 #kc-otp-login-form .kcLoginOTPListClass::after {
