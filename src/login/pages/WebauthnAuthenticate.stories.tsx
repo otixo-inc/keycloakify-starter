@@ -26,6 +26,12 @@ export const WithMultipleAuthenticators: Story = {
     render: () => (
         <KcPageStory
             kcContext={{
+                auth: {
+                    showUsername: true,
+                    showResetCredentials: false,
+                    showTryAnotherWayLink: true,
+                    attemptedUsername: "user@place.com"
+                },
                 url: {
                     loginAction: "/mock-login-action"
                 },

@@ -51,6 +51,5 @@
 }
 
 .kcSelectAuthListItemTitle {
-    text-align: left;
-    padding-left: 20px;
+    display: none;
 }

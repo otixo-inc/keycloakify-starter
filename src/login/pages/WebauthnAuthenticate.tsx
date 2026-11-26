@@ -41,6 +41,7 @@ export default function WebauthnAuthenticate(props: PageProps<Extract<KcContext,
                 </div>
             }
             headerNode={msg("webauthn-login-title")}
+            subheaderNode={msg("webauthn-login-subtitle")}
         >
             <div id="kc-form-webauthn" className={kcClsx("kcFormClass")}>
                 <form id="webauth" action={url.loginAction} method="post">
